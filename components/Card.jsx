@@ -3,7 +3,7 @@ import Link from "next/link";
 const CardAbout = (props) => {
   return (
     <div
-      className=" border border-[#B8B8B8] rounded-lg pt-5 px-5 bg-white w-full md:w-72"
+      className=" border border-[#B8B8B8] rounded-lg pt-5 px-5 bg-white w-full "
       key={props.id}
     >
       <Image
@@ -41,7 +41,10 @@ const CardProduct = (props) => {
 
 const CardActivity = (props) => {
   return (
-    <div className=" border border-black bg-white" key={props.id}>
+    <div
+      className="flex-none border border-black bg-white w-64 md:w-72"
+      key={props.id}
+    >
       <Image
         src={props.image}
         alt="hero"
@@ -49,7 +52,7 @@ const CardActivity = (props) => {
         height={500}
         className="h-56 object-cover"
       />
-      <div className=" border-t-2 border-black">
+      <div className=" border-t-2 border-black px-3 py-5">
         <h2>{props.title}</h2>
         <div className="flex justify-between">
           <p>{props.date}</p>

@@ -19,9 +19,8 @@ import map from "@/assets/map.png";
 import Link from "next/link";
 import { MainNavbar } from "@/components/Navbar";
 import hero3 from "@/assets/hero-3.png";
-import instagram from "@/assets/icons/arcticons_instagram.png";
-import linkedin from "@/assets/icons/arcticons_linkedin.png";
-import tiktok from "@/assets/icons/arcticons_tiktok.png";
+
+import Footer from "@/components/Footer";
 
 const VideoPlayer = dynamic(() => import("@/components/VideoPlayer"), {
   ssr: false,
@@ -169,7 +168,7 @@ export default function Home() {
               height={500}
               className="absolute right-0 top-52 animate-bounce-slow w-[300px] md:w-[500px] h-[300px] md:h-[500px]  object-cover"
             />
-            <h1 className="pt-32 px-10 font-medium uppercase text-[24px] md:text-[56px] text-center w-full md:w-[800px]  leading-normal md:leading-[85px]  m-auto">
+            <h1 className="pt-40 md:pt-32 px-10 font-medium uppercase text-[28px] md:text-[56px] text-center w-full md:w-[800px]  leading-normal md:leading-[85px]  m-auto">
               Where <span className="text-[#FFDA57] underline">Ideas</span> Take
               Flight and Knowledge Knows No Bounds
             </h1>
@@ -242,7 +241,7 @@ export default function Home() {
               <p className="text-center">Program</p>
             </div>
 
-            <div className="flex  flex-wrap gap-10">
+            <div className="flex flex-col md:flex-row   gap-5 md:gap-10">
               {aboutItems.map((item) => (
                 <CardAbout {...item} />
               ))}
@@ -260,7 +259,7 @@ export default function Home() {
         <div id="product" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
           <h1 className="text-center text-[48px] font-bold">Product</h1>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
             {productItems.map((item) => (
               <CardProduct {...item} />
             ))}
@@ -369,161 +368,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div
-          id="footer"
-          className="bg-[#0F1035] pt-10 pb-5 px-5 md:px-20 text-white"
-        >
-          <div className="flex flex-col  gap-10 md:justify-between">
-            <div>
-              <h1 className="text-white">S-CUBE CENTER</h1>
-              <p className="text-white">S-CUBE CENTER</p>
-            </div>
-
-            <div className=" hidden md:block ">
-              <h5 className="font-bold text-lg  mb-3">Navigation</h5>
-              <ul className="flex flex-col gap-3">
-                <li>
-                  <Link
-                    href="/"
-                    className=" hover:underline hover:underline-offset-4"
-                  >
-                    - Home
-                  </Link>{" "}
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className=" hover:underline hover:underline-offset-4"
-                  >
-                    - Program
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className=" hover:underline hover:underline-offset-4"
-                  >
-                    - Product
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className=" hover:underline hover:underline-offset-4"
-                  >
-                    - Galery
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className=" hover:underline hover:underline-offset-4"
-                  >
-                    - Activity
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className=" hidden md:block ">
-              <h5 className="font-bold text-lg  mb-3">Contact</h5>
-              <div className="flex flex-col gap-3">
-                <p>Location</p>
-                <p>Number</p>
-                <p>Email</p>
-              </div>
-            </div>
-
-            <div className="flex gap-10 md:hidden">
-              <div className=" ">
-                <h5 className="font-bold text-lg  mb-3">Navigation</h5>
-                <ul className="flex flex-col gap-3">
-                  <li>
-                    <Link
-                      href="/"
-                      className=" hover:underline hover:underline-offset-4"
-                    >
-                      - Home
-                    </Link>{" "}
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className=" hover:underline hover:underline-offset-4"
-                    >
-                      - Program
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className=" hover:underline hover:underline-offset-4"
-                    >
-                      - Product
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className=" hover:underline hover:underline-offset-4"
-                    >
-                      - Galery
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className=" hover:underline hover:underline-offset-4"
-                    >
-                      - Activity
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h5 className="font-bold text-lg  mb-3">Contact</h5>
-                <div className="flex flex-col gap-3">
-                  <p>Location</p>
-                  <p>Number</p>
-                  <p>Email</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h5 className="font-bold text-lg  mb-3">Follow Us</h5>
-              <div className="flex gap-5">
-                <Link
-                  href="https://www.instagram.com/scubecenter/"
-                  className="bg-white p-2 hover:bg-red-400"
-                  target="_blank"
-                >
-                  <Image src={instagram} alt="instagram" className="w-6 h-6" />
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/company/unram-scube-center/"
-                  className="bg-white p-2 hover:bg-blue-400"
-                  target="_blank"
-                >
-                  <Image src={linkedin} alt="instagram" className="w-6 h-6" />
-                </Link>
-                <Link
-                  href="https://www.tiktok.com/@kkn.unramxsnu"
-                  className="bg-white p-2 hover:bg-yellow-400"
-                  target="_blank"
-                >
-                  <Image src={tiktok} alt="instagram" className="w-6 h-6" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-[#000000] py-5 px-5 md:px-20">
-          <p className="text-center md:text-end text-white text-sm font-light">
-            © 2024 S-CUBE CENTER. All Rights Reserved.
-          </p>
-        </div>
+        <Footer />
       </main>
     </>
   );
