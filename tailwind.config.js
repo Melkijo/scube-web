@@ -20,12 +20,12 @@ module.exports = {
             },
             animation: {
                 //make up and down slow
-                'bounce-slow': 'bounce 3s infinite',
+                'slow-right': 'slowRight 3s infinite',
                 'slow-left': 'slowLeft 3s infinite',
 
             },
             keyframes: {
-                bounce: {
+                slowRight: {
                     '0%, 100%': { transform: 'translateY(-10%)', animationTimingFunction: 'ease-in-out' },
                     '50%': { transform: 'translateX(10%)', animationTimingFunction: 'ease-in-out' },
                 },

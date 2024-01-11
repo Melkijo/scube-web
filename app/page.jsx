@@ -19,6 +19,8 @@ import map from "@/assets/map.png";
 import Link from "next/link";
 import { MainNavbar } from "@/components/Navbar";
 import hero3 from "@/assets/hero-3.png";
+import heroArrow from "@/assets/icons/arrow-hero.png";
+import { TypeAnimation } from "react-type-animation";
 
 import Footer from "@/components/Footer";
 
@@ -149,11 +151,15 @@ const activityItems = [
 export default function Home() {
   return (
     <>
-      <div className="relative z-10">
+      <div className="fixed z-20 w-full ">
         <MainNavbar />
       </div>
+
       <main>
-        <div id="hero" className=" max-w-[1520px] m-auto  overflow-hidden">
+        <div
+          id="hero"
+          className=" max-w-[1520px] m-auto  overflow-hidden pt-16"
+        >
           <div className="h-[500px] md:h-[620px] relative">
             <Image
               src={hero1}
@@ -167,14 +173,39 @@ export default function Home() {
               alt="hero"
               width={500}
               height={500}
-              className="absolute right-0 top-60 md:top-32 animate-bounce-slow w-[300px] md:w-[500px] h-[300px] md:h-[500px]  object-cover"
+              className="absolute right-0 top-60 md:top-32 animate-slow-right w-[300px] md:w-[500px] h-[300px] md:h-[500px]  object-cover"
             />
-            <h1 className="font-display pt-40 md:pt-32 px-10 font-medium uppercase text-[22px] md:text-[48px] text-center w-full md:w-[1000px]  leading-normal md:leading-[85px]  m-auto">
-              Where <span className="text-[#FFDA57] underline">Ideas</span> Take
-              Flight and Knowledge Knows No Bounds
+            <h1 className="relative z-10 font-display pt-40 md:pt-32 px-10 font-medium uppercase text-[22px] md:text-[48px] text-center w-full md:w-[1000px]  leading-normal md:leading-[85px]  m-auto">
+              Where{" "}
+              <span className="text-[#FFDA57] underline">
+                <TypeAnimation
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    "Ideas",
+                    4000, // wait 1s before replacing "Mice" with "Hamsters"
+                    "Student",
+                    4000,
+                    "Spirits",
+                    4000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </span>{" "}
+              Take Flight and Knowledge Knows No Bounds
             </h1>
 
-            <div>
+            <div className="relative">
+              <Link href="#about">
+                <Image
+                  src={heroArrow}
+                  alt="hero"
+                  width={100}
+                  height={100}
+                  className="animate-bounce absolute z-10 top-5 md:top-16 left-0 right-0 mx-auto w-[30px] md:w-[50px] h-[30px] md:h-[50px]  object-cover"
+                />
+              </Link>
               <Image
                 src={hero3}
                 alt="hero"
@@ -223,15 +254,12 @@ export default function Home() {
               <CardAbout {...aboutItems[3]} />
             </div>
           </div>
-          <div className=" md:hidden flex flex-col items-center justify-center gap-3 ">
-            <div className="flex gap-3">
-              <CardAbout {...aboutItems[0]} />
-              <CardAbout {...aboutItems[1]} />
-            </div>
-            <div className="flex gap-3">
-              <CardAbout {...aboutItems[2]} />
-              <CardAbout {...aboutItems[3]} />
-            </div>
+          <div className=" md:hidden grid grid-cols-2  gap-3 ">
+            <CardAbout {...aboutItems[0]} />
+            <CardAbout {...aboutItems[1]} />
+
+            <CardAbout {...aboutItems[2]} />
+            <CardAbout {...aboutItems[3]} />
           </div>
         </div>
 
@@ -285,7 +313,7 @@ export default function Home() {
             Product
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-10">
             {productItems.map((item) => (
               <CardProduct {...item} />
             ))}
@@ -347,30 +375,19 @@ export default function Home() {
         </div>
         <div id="activity" className="bg-[#F8FFEC]">
           <div className="py-10">
-            <div className=" max-w-[1520px] mb-7 m-auto flex justify-between items-end px-5 md:px-20">
-              <h2 className="text-center  text-3xl  md:text-[38px] font-bold mb-3 md:mb-7">
-                Activity
-              </h2>
-              <div className="flex gap-5">
-                <button>
-                  <ArrowLeft />
-                </button>
-                <button>
-                  <ArrowRight />
-                </button>
-              </div>
-            </div>
-            <div className="flex w-full gap-5 overflow-x-auto">
-              {activityItems.map((item) => (
-                <CardActivity {...item} />
-              ))}
-            </div>
-            <div className="flex justify-center mt-5">
+            <div className=" max-w-[1520px] mb-7 m-auto flex justify-between items-center px-5 md:px-20">
+              <h2 className=" text-3xl  md:text-[38px] font-bold ">Activity</h2>
+
               <Link href="/activities">
                 <button className="border-black border rounded-full px-5 ">
                   <Arrow />
                 </button>
               </Link>
+            </div>
+            <div className="flex w-full gap-5 overflow-x-auto pb-3">
+              {activityItems.map((item) => (
+                <CardActivity {...item} />
+              ))}
             </div>
           </div>
         </div>

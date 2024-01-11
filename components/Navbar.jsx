@@ -6,7 +6,7 @@ import tiktok from "@/assets/icons/arcticons_tiktok.png";
 
 const MainNavbar = () => {
   return (
-    <div className="navbar bg-base-100 max-w-[1520px] m-auto px-5 md:px-20">
+    <div className="navbar  bg-base-100 max-w-[1520px] m-auto px-5 md:px-20">
       <div className=" justify-between w-full md:justify-start md:w-[50%]">
         <Link href="/" className="text-xl font-bold">
           S-CUBE CENTER
@@ -30,7 +30,7 @@ const MainNavbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-36"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
           >
             <li>
               <Link href="/">Home</Link>
@@ -43,6 +43,36 @@ const MainNavbar = () => {
             </li>
             <li>
               <Link href="/">Activity</Link>
+            </li>
+            <li>
+              <h5 className="font-bold pt-3">Follow Us</h5>
+              <div className="flex gap-5">
+                <Link
+                  href="https://www.instagram.com/scubecenter/"
+                  className="bg-white p-2 hover:bg-red-400"
+                  target="_blank"
+                >
+                  <Image
+                    src={instagram}
+                    alt="instagram"
+                    className="w-6 h-6 object-cover"
+                  />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/unram-scube-center/"
+                  className="bg-white p-2 hover:bg-blue-400"
+                  target="_blank"
+                >
+                  <Image src={linkedin} alt="instagram" className="w-6 h-6" />
+                </Link>
+                <Link
+                  href="https://www.tiktok.com/@kkn.unramxsnu"
+                  className="bg-white p-2 hover:bg-yellow-400"
+                  target="_blank"
+                >
+                  <Image src={tiktok} alt="instagram" className="w-6 h-6" />
+                </Link>
+              </div>
             </li>
           </ul>
         </div>
