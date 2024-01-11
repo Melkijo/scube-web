@@ -3,7 +3,7 @@ import Link from "next/link";
 const CardAbout = (props) => {
   return (
     <div
-      className=" border border-[#B8B8B8] rounded-lg pt-5 px-5 bg-white w-full "
+      className={`border border-[#B8B8B8]  rounded-lg pt-5 px-5 bg-[${props.color}] w-full `}
       key={props.id}
     >
       <Image
@@ -15,7 +15,7 @@ const CardAbout = (props) => {
       />
       <div className="pt-3 pb-5  text-center">
         <h2 className="text-lg md:text-2xl font-semibold">{props.title}</h2>
-        <p className="text-sm md:text-base">{props.desc}</p>
+        <p className="text-sm line-clamp-3 md:text-base">{props.desc}</p>
       </div>
     </div>
   );
@@ -31,9 +31,9 @@ const CardProduct = (props) => {
         height={500}
         className="h-56 object-cover"
       />
-      <div className="flex justify-between flex-wrap border-t-2 border-black">
+      <div className="flex justify-between flex-wrap border-t-2 border-black px-3">
         <h2>{props.title}</h2>
-        <p>{props.price}</p>
+        <p className="line-clamp-3">{props.price}</p>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import instagram from "@/assets/icons/arcticons_instagram.png";
 import linkedin from "@/assets/icons/arcticons_linkedin.png";
 import tiktok from "@/assets/icons/arcticons_tiktok.png";
 import Image from "next/image";
+import logo from "@/assets/logo.png";
 export default function Footer() {
   return (
     <>
@@ -10,10 +11,13 @@ export default function Footer() {
         id="footer"
         className="bg-[#0F1035] pt-10 pb-5 px-5 md:px-20 text-white"
       >
-        <div className="flex flex-col  gap-10 md:justify-between">
-          <div>
-            <h1 className="text-white">S-CUBE CENTER</h1>
-            <p className="text-white">S-CUBE CENTER</p>
+        <div className="flex md:flex-row flex-col  gap-10 md:justify-between">
+          <div className="flex flex-row md:flex-col gap-5 md:items-start items-center">
+            <Image src={logo} alt="logo" className="w-24 h-24" />
+            <div>
+              <h2 className="text-white font-bold text-2xl ">S-CUBE CENTER</h2>
+              <p className="text-white">SNU Samick Sustainability</p>
+            </div>
           </div>
 
           <div className=" hidden md:block ">
@@ -157,7 +161,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-[#000000] py-5 px-5 md:px-20">
-        <p className="text-center md:text-end text-white text-sm font-light">
+        <p className="text-center md:text-end text-white text-xs md:text-sm font-light">
           © 2024 S-CUBE CENTER. All Rights Reserved.
         </p>
       </div>

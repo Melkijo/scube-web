@@ -1,15 +1,6 @@
-import { Inter, Dela_Gothic_One, Montserrat } from "next/font/google";
 //import dela gothic one font
-
+import { montserrat, delaGothicOne } from "./fonts";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
-const dela_gothic_one = Dela_Gothic_One({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "S-Cube Center | Universitas Mataram",
@@ -19,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${dela_gothic_one.variable}`}>
+      <body className={`${montserrat.variable} ${delaGothicOne.variable}`}>
         {children}
       </body>
     </html>

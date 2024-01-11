@@ -33,6 +33,7 @@ const aboutItems = [
 
     desc: "S-Cube Center is dedicated to fostering innovation in various domains, including technology, education, and business. ",
     image: aboutImage,
+    color: "#FF9BD2",
   },
   {
     id: 2,
@@ -166,12 +167,13 @@ export default function Home() {
               alt="hero"
               width={500}
               height={500}
-              className="absolute right-0 top-52 animate-bounce-slow w-[300px] md:w-[500px] h-[300px] md:h-[500px]  object-cover"
+              className="absolute right-0 top-60 md:top-32 animate-bounce-slow w-[300px] md:w-[500px] h-[300px] md:h-[500px]  object-cover"
             />
-            <h1 className="pt-40 md:pt-32 px-10 font-medium uppercase text-[28px] md:text-[56px] text-center w-full md:w-[800px]  leading-normal md:leading-[85px]  m-auto">
+            <h1 className="font-display pt-40 md:pt-32 px-10 font-medium uppercase text-[22px] md:text-[48px] text-center w-full md:w-[1000px]  leading-normal md:leading-[85px]  m-auto">
               Where <span className="text-[#FFDA57] underline">Ideas</span> Take
               Flight and Knowledge Knows No Bounds
             </h1>
+
             <div>
               <Image
                 src={hero3}
@@ -187,7 +189,7 @@ export default function Home() {
         <div id="marquee" className="bg-black py-3 relative z-10 text-white">
           <Marquee autoFill>
             <div className=" mr-5 font-black text-xl">
-              SEOUL NATIONAL UNIVERISITY
+              SEOUL NATIONAL UNIVERSITY
             </div>
             <div className=" mr-5 font-black text-xl">MATARAM UNIVERSITY</div>
             <div className=" mr-5 font-black text-xl">SAMIC</div>
@@ -198,10 +200,10 @@ export default function Home() {
           <div className=" rounded-lg  relative z-10 pt-20 bg-white">
             <VideoPlayer />
           </div>
-          <div className="py-5">
-            <h1 className="text-center  text-2xl md:text-[48px] font-bold mb-3">
-              What is S-Cube Center
-            </h1>
+          <div className="py-8">
+            <h2 className="text-center  text-2xl md:text-[38px] font-bold mb-4">
+              What is S-Cube Center?
+            </h2>
             <p className="text-center text-base">
               S-CUBE Center means 3S, which are SNU, Samick, and Sustainability.
               S-Cube is an innovation center that focuses on developing
@@ -230,15 +232,37 @@ export default function Home() {
               <CardAbout {...aboutItems[2]} />
               <CardAbout {...aboutItems[3]} />
             </div>
-            <div></div>
+          </div>
+        </div>
+
+        <div className="max-w-[1520px] m-auto pt-10 px-5 flex flex-col justify-center items-center gap-7 md:px-20 pb-10 w-full md:w-[1200px]">
+          <h2 className="font-black text-[24px] md:text-[36px] text-center bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            "I recently had the pleasure of experiencing the wonders of Scube
+            Center, and I must say, it exceeded all my expectations."
+          </h2>
+          <div className="flex gap-3 items-center">
+            <Image
+              src={galery2}
+              width={100}
+              height={100}
+              className="h-14 md:h-24 w-14 md:w-24 rounded-full object-cover"
+            />
+            <div>
+              <h5 className="font-black text-sm md:text-lg">
+                Melki Jonathan Andara
+              </h5>
+              <p className="text-xs md:text-base">CEO of MejoTech</p>
+            </div>
           </div>
         </div>
 
         <div id="program" className="bg-[#F8FFEC] py-10">
           <div className="max-w-[1520px] m-auto px-5 md:px-20">
             <div className="mb-5">
-              <h1 className="text-center text-[48px] font-bold">Program</h1>
-              <p className="text-center">Program</p>
+              <h2 className="text-center text-3xl md:text-[38px] font-bold mb-3 md:mb-5">
+                Program
+              </h2>
+              <p className="text-center">Collaboration with spirit</p>
             </div>
 
             <div className="flex flex-col md:flex-row   gap-5 md:gap-10">
@@ -247,8 +271,8 @@ export default function Home() {
               ))}
             </div>
             <div className="flex justify-center">
-              <Link href="/programs" className=" mt-5">
-                <button className="border-black border rounded-full px-5 ">
+              <Link href="/programs" className=" mt-7">
+                <button className="border-black border rounded-full px-5 hover:bg-black">
                   <Arrow />
                 </button>
               </Link>
@@ -257,7 +281,9 @@ export default function Home() {
         </div>
 
         <div id="product" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
-          <h1 className="text-center text-[48px] font-bold">Product</h1>
+          <h2 className="text-center text-3xl md:text-[38px] font-bold mb-3 md:mb-7">
+            Product
+          </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
             {productItems.map((item) => (
@@ -274,7 +300,9 @@ export default function Home() {
         </div>
 
         <div id="galery" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
-          <h1 className="text-center text-[48px] font-bold">Gallery</h1>
+          <h2 className="text-center text-3xl md:text-[38px] font-bold mb-3 md:mb-7">
+            Gallery
+          </h2>
           <div className="flex flex-col gap-5">
             <div className="flex gap-5">
               <div>
@@ -319,8 +347,10 @@ export default function Home() {
         </div>
         <div id="activity" className="bg-[#F8FFEC]">
           <div className="py-10">
-            <div className=" max-w-[1520px] m-auto flex justify-between px-5 md:px-20">
-              <h1 className="text-center text-[48px] font-bold">Activity</h1>
+            <div className=" max-w-[1520px] mb-7 m-auto flex justify-between items-end px-5 md:px-20">
+              <h2 className="text-center  text-3xl  md:text-[38px] font-bold mb-3 md:mb-7">
+                Activity
+              </h2>
               <div className="flex gap-5">
                 <button>
                   <ArrowLeft />
@@ -346,21 +376,23 @@ export default function Home() {
         </div>
 
         <div id="contact" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
-          <h1 className="text-center text-[48px] font-bold">Contact</h1>
+          <h2 className="text-center text-3xl  md:text-[38px] font-bold mb-3 md:mb-7">
+            Contact
+          </h2>
           <div className="flex flex-col md:flex-row gap-5">
             <Image src={map} alt="hero" width={700} height={500} />
             <div className="flex flex-col gap-5">
               <div>
-                <h3>Location</h3>
+                <h3 className="font-bold text-xl">Location</h3>
                 <p>Samick Music Corporation</p>
               </div>
-              <div className="flex justify-between">
+              <div className="flex md:flex-col gap-5 flex-row  justify-between">
                 <div>
-                  <h3>Number</h3>
+                  <h3 className="font-bold text-xl">Number</h3>
                   <p>081775262222</p>
                 </div>
                 <div>
-                  <h3>Email</h3>
+                  <h3 className="font-bold text-xl">Email</h3>
                   <p>scube@gmail.com</p>
                 </div>
               </div>
