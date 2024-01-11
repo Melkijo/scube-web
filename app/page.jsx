@@ -219,11 +219,11 @@ export default function Home() {
 
         <div id="marquee" className="bg-black py-3 relative z-10 text-white">
           <Marquee autoFill>
-            <div className=" mr-5 font-black text-xl">
+            <div className=" mr-5 font-black text-xs">
               SEOUL NATIONAL UNIVERSITY
             </div>
-            <div className=" mr-5 font-black text-xl">MATARAM UNIVERSITY</div>
-            <div className=" mr-5 font-black text-xl">SAMIC</div>
+            <div className=" mr-5 font-black text-xs">MATARAM UNIVERSITY</div>
+            <div className=" mr-5 font-black text-xs">SAMIC</div>
           </Marquee>
         </div>
 
