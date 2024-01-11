@@ -6,12 +6,12 @@ import tiktok from "@/assets/icons/arcticons_tiktok.png";
 
 const MainNavbar = () => {
   return (
-    <div className="navbar bg-base-100 max-w-[1520px] m-auto px-10 md:px-20">
+    <div className="navbar bg-base-100 max-w-[1520px] m-auto px-5 md:px-20">
       <div className=" justify-between w-full md:justify-start md:w-[50%]">
         <Link href="/" className="text-xl font-bold">
           S-CUBE CENTER
         </Link>
-        <div className="dropdown">
+        <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const MainNavbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-36"
           >
             <li>
               <Link href="/">Home</Link>

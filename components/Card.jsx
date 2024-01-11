@@ -3,7 +3,7 @@ import Link from "next/link";
 const CardAbout = (props) => {
   return (
     <div
-      className=" border border-[#B8B8B8] rounded-lg pt-5 px-5 bg-white w-72"
+      className=" border border-[#B8B8B8] rounded-lg pt-5 px-5 bg-white w-full md:w-72"
       key={props.id}
     >
       <Image
@@ -11,11 +11,11 @@ const CardAbout = (props) => {
         alt="hero"
         width={500}
         height={300}
-        className="h-48  object-cover"
+        className="h-auto md:h-48  object-cover"
       />
       <div className="pt-3 pb-5  text-center">
-        <h2 className="text-2xl font-semibold">{props.title}</h2>
-        <p>{props.desc}</p>
+        <h2 className="text-lg md:text-2xl font-semibold">{props.title}</h2>
+        <p className="text-sm md:text-base">{props.desc}</p>
       </div>
     </div>
   );

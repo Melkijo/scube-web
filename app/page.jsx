@@ -160,7 +160,7 @@ export default function Home() {
               alt="hero"
               width={500}
               height={500}
-              className="absolute animate-slow-left  w-[300px] md:w-[500px] h-[300px] md:h-[500px]  object-cover"
+              className="absolute animate-slow-left  w-[250px] md:w-[500px] h-[250px] md:h-[500px]  object-cover"
             />
             <Image
               src={hero2}
@@ -169,7 +169,7 @@ export default function Home() {
               height={500}
               className="absolute right-0 top-52 animate-bounce-slow w-[300px] md:w-[500px] h-[300px] md:h-[500px]  object-cover"
             />
-            <h1 className="pt-32 px-10 font-medium uppercase text-[36px] md:text-[56px] text-center w-full md:w-[800px]  leading-normal md:leading-[85px]  m-auto">
+            <h1 className="pt-32 px-10 font-medium uppercase text-[24px] md:text-[56px] text-center w-full md:w-[800px]  leading-normal md:leading-[85px]  m-auto">
               Where <span className="text-[#FFDA57] underline">Ideas</span> Take
               Flight and Knowledge Knows No Bounds
             </h1>
@@ -195,15 +195,15 @@ export default function Home() {
           </Marquee>
         </div>
 
-        <div id="about" className="max-w-[1520px] m-auto px-10 md:px-20 pb-10">
+        <div id="about" className="max-w-[1520px] m-auto px-5 md:px-20 pb-10">
           <div className=" rounded-lg  relative z-10 pt-20 bg-white">
             <VideoPlayer />
           </div>
           <div className="py-5">
-            <h1 className="text-center text-[48px] font-bold mb-3">
+            <h1 className="text-center  text-2xl md:text-[48px] font-bold mb-3">
               What is S-Cube Center
             </h1>
-            <p className="text-center">
+            <p className="text-center text-base">
               S-CUBE Center means 3S, which are SNU, Samick, and Sustainability.
               S-Cube is an innovation center that focuses on developing
               sustainable social empowerment programs in technology, education,
@@ -236,7 +236,7 @@ export default function Home() {
         </div>
 
         <div id="program" className="bg-[#F8FFEC] py-10">
-          <div className="max-w-[1520px] m-auto px-20">
+          <div className="max-w-[1520px] m-auto px-5 md:px-20">
             <div className="mb-5">
               <h1 className="text-center text-[48px] font-bold">Program</h1>
               <p className="text-center">Program</p>
@@ -257,10 +257,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="product" className="max-w-[1520px] m-auto px-20 py-10">
+        <div id="product" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
           <h1 className="text-center text-[48px] font-bold">Product</h1>
 
-          <div className="grid grid-cols-4 gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
             {productItems.map((item) => (
               <CardProduct {...item} />
             ))}
@@ -274,7 +274,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="galery" className="max-w-[1520px] m-auto px-20 py-10">
+        <div id="galery" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
           <h1 className="text-center text-[48px] font-bold">Gallery</h1>
           <div className="flex flex-col gap-5">
             <div className="flex gap-5">
@@ -320,7 +320,7 @@ export default function Home() {
         </div>
         <div id="activity" className="bg-[#F8FFEC]">
           <div className="py-10">
-            <div className=" max-w-[1520px] m-auto flex justify-between px-20">
+            <div className=" max-w-[1520px] m-auto flex justify-between px-5 md:px-20">
               <h1 className="text-center text-[48px] font-bold">Activity</h1>
               <div className="flex gap-5">
                 <button>
@@ -331,7 +331,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="flex w-full gap-5">
+            <div className="flex w-full gap-5 overflow-x-auto">
               {activityItems.map((item) => (
                 <CardActivity {...item} />
               ))}
@@ -346,35 +346,40 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="contact" className="max-w-[1520px] m-auto px-20 py-10">
+        <div id="contact" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
           <h1 className="text-center text-[48px] font-bold">Contact</h1>
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <Image src={map} alt="hero" width={700} height={500} />
             <div className="flex flex-col gap-5">
               <div>
-                <h3>Place</h3>
+                <h3>Location</h3>
                 <p>Samick Music Corporation</p>
               </div>
-              <div>
-                <h3>Place</h3>
-                <p>Samick Music Corporation</p>
-              </div>
-              <div>
-                <h3>Place</h3>
-                <p>Samick Music Corporation</p>
+              <div className="flex justify-between">
+                <div>
+                  <h3>Number</h3>
+                  <p>081775262222</p>
+                </div>
+                <div>
+                  <h3>Email</h3>
+                  <p>scube@gmail.com</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="footer" className="bg-[#0F1035] pt-10 pb-5 px-20 text-white">
-          <div className="flex justify-between">
+        <div
+          id="footer"
+          className="bg-[#0F1035] pt-10 pb-5 px-5 md:px-20 text-white"
+        >
+          <div className="flex flex-col  gap-10 md:justify-between">
             <div>
               <h1 className="text-white">S-CUBE CENTER</h1>
               <p className="text-white">S-CUBE CENTER</p>
             </div>
 
-            <div>
+            <div className=" hidden md:block ">
               <h5 className="font-bold text-lg  mb-3">Navigation</h5>
               <ul className="flex flex-col gap-3">
                 <li>
@@ -420,7 +425,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div>
+            <div className=" hidden md:block ">
               <h5 className="font-bold text-lg  mb-3">Contact</h5>
               <div className="flex flex-col gap-3">
                 <p>Location</p>
@@ -429,6 +434,62 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="flex gap-10 md:hidden">
+              <div className=" ">
+                <h5 className="font-bold text-lg  mb-3">Navigation</h5>
+                <ul className="flex flex-col gap-3">
+                  <li>
+                    <Link
+                      href="/"
+                      className=" hover:underline hover:underline-offset-4"
+                    >
+                      - Home
+                    </Link>{" "}
+                  </li>
+                  <li>
+                    <Link
+                      href="/"
+                      className=" hover:underline hover:underline-offset-4"
+                    >
+                      - Program
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/"
+                      className=" hover:underline hover:underline-offset-4"
+                    >
+                      - Product
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/"
+                      className=" hover:underline hover:underline-offset-4"
+                    >
+                      - Galery
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/"
+                      className=" hover:underline hover:underline-offset-4"
+                    >
+                      - Activity
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="font-bold text-lg  mb-3">Contact</h5>
+                <div className="flex flex-col gap-3">
+                  <p>Location</p>
+                  <p>Number</p>
+                  <p>Email</p>
+                </div>
+              </div>
+            </div>
             <div>
               <h5 className="font-bold text-lg  mb-3">Follow Us</h5>
               <div className="flex gap-5">
@@ -458,8 +519,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#000000] py-5 px-20">
-          <p className="text-end text-white text-sm font-light">
+        <div className="bg-[#000000] py-5 px-5 md:px-20">
+          <p className="text-center md:text-end text-white text-sm font-light">
             © 2024 S-CUBE CENTER. All Rights Reserved.
           </p>
         </div>
