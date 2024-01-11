@@ -203,7 +203,7 @@ export default function Home() {
                   alt="hero"
                   width={100}
                   height={100}
-                  className="animate-bounce absolute z-10 top-5 md:top-16 left-0 right-0 mx-auto w-[30px] md:w-[50px] h-[30px] md:h-[50px]  object-cover"
+                  className="animate-bounce absolute z-10 top-12 md:top-16 left-0 right-0 mx-auto w-[30px] md:w-[50px] h-[30px] md:h-[50px]  object-cover"
                 />
               </Link>
               <Image
