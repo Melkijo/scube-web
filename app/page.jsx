@@ -29,6 +29,8 @@ import { TypeAnimation } from "react-type-animation";
 
 import Footer from "@/components/Footer";
 import jsonData from "@/data/program.js";
+import jsonDataProduct from "@/data/products";
+
 const VideoPlayer = dynamic(() => import("@/components/VideoPlayer"), {
   ssr: false,
 });
@@ -58,59 +60,6 @@ const aboutItems = [
     id: 4,
     title: "Social Empowerment",
     desc: "This value reflects a commitment to using innovation and collaboration to positively influence and uplift communities. ",
-    image: aboutImage,
-  },
-];
-
-const productItems = [
-  {
-    id: 1,
-    title: "Innovation",
-
-    price: "120.000",
-    image: aboutImage,
-  },
-  {
-    id: 2,
-    title: "Collaboration",
-    price: "120.000",
-    image: aboutImage,
-  },
-  {
-    id: 3,
-    title: "Sustainability",
-    price: "120.000",
-    image: aboutImage,
-  },
-  {
-    id: 4,
-    title: "Social Empowerment",
-    price: "120.000",
-    image: aboutImage,
-  },
-  {
-    id: 1,
-    title: "Innovation",
-
-    price: "120.000",
-    image: aboutImage,
-  },
-  {
-    id: 2,
-    title: "Collaboration",
-    price: "120.000",
-    image: aboutImage,
-  },
-  {
-    id: 3,
-    title: "Sustainability",
-    price: "120.000",
-    image: aboutImage,
-  },
-  {
-    id: 4,
-    title: "Social Empowerment",
-    price: "120.000",
     image: aboutImage,
   },
 ];
@@ -155,6 +104,7 @@ const activityItems = [
 
 export default function Home() {
   const parsedData = JSON.parse(jsonData);
+  const parsedProducts = JSON.parse(jsonDataProduct);
   return (
     <>
       <div className="fixed z-20 w-full ">
@@ -323,7 +273,7 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-10">
-            {productItems.map((item) => (
+            {parsedProducts.map((item) => (
               <CardProduct {...item} />
             ))}
           </div>
