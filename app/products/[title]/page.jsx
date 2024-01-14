@@ -5,6 +5,7 @@ import jsonData from "@/data/products";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { CardProduct } from "@/components/Card";
 export default function Page({ params }) {
   const router = useRouter();
   const [size, setSize] = useState("M");
@@ -18,6 +19,31 @@ export default function Page({ params }) {
     (product) => product.title === params.title
   );
   const modifiedTitle = selectedProduct.title.replace(/\s+/g, "%20");
+  const excludeProduct = parsedData
+    .filter((program) => program.id !== selectedProduct.id)
+    .slice(0, 3);
+  // Check if a program with the specified id was found
+
+  // Function to shuffle an array
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    return shuffledArray;
+  };
+
+  // Assuming excludeProgram is an array of programs and targetId is the ID to exclude
+  const shuffledProducts = shuffleArray(excludeProduct);
+
+  // Exclude the targetId
+  const filteredProducts = shuffledProducts.filter(
+    (program) => program.id !== selectedProduct.id
+  );
 
   const handleBuyNow = () => {
     // alert(`${size} ${selectedProduct.title}`);
@@ -33,7 +59,7 @@ export default function Page({ params }) {
   return (
     <>
       <MainNavbar />
-      <div className="max-w-[1520px] m-auto px-5 md:px-20 pt-8 pb-14">
+      <div className="max-w-[1520px] m-auto px-5 lg:px-20 pt-8 pb-14">
         <div className="flex flex-col md:flex-row gap-5">
           <div className="w-full md:w-[1400px] bg-yellow-100">
             <img
@@ -108,6 +134,18 @@ export default function Page({ params }) {
             {/* </Link> */}
 
             <p>{selectedProduct.description}</p>
+          </div>
+        </div>
+      </div>
+      <div className="w-full bg-yellow-200">
+        <div className="max-w-[1520px] m-auto px-5 lg:px-20 pt-10 pb-16">
+          <h2 className="text-[28px] md:text-[36px] text-center font-bold pb-5">
+            OTHER PRODUCT
+          </h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3  gap-5 ">
+            {filteredProducts.slice(0, 3).map((product) => (
+              <CardProduct key={product.id} {...product} />
+            ))}
           </div>
         </div>
       </div>

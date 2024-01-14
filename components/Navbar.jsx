@@ -1,13 +1,16 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import instagram from "@/assets/icons/arcticons_instagram.png";
 import linkedin from "@/assets/icons/arcticons_linkedin.png";
 import tiktok from "@/assets/icons/arcticons_tiktok.png";
+import { usePathname } from "next/navigation";
 
 const MainNavbar = () => {
+  const pathname = usePathname();
   return (
-    <div className="navbar  bg-base-100 max-w-[1520px] m-auto px-5 md:px-20">
-      <div className=" justify-between w-full md:justify-start md:w-[50%]">
+    <div className="navbar  bg-base-100 max-w-[1520px] m-auto px-5 lg:px-20">
+      <div className=" justify-between w-full lg:justify-start lg:w-[50%]">
         <Link href="/" className="text-xl font-bold">
           S-CUBE CENTER
         </Link>
@@ -80,14 +83,21 @@ const MainNavbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className=" flex gap-5 px-1  ">
           <li>
-            <Link href="/" className="text-base no-underline hover:underline">
+            <Link
+              href="/"
+              className={`text-base hover:underline ${
+                pathname === "/" ? "underline" : "no-underline"
+              }`}
+            >
               Home
             </Link>
           </li>
           <li>
             <Link
               href="/programs"
-              className="text-base no-underline hover:underline"
+              className={`text-base hover:underline ${
+                pathname === "/programs" ? "underline" : "no-underline"
+              }`}
             >
               Program
             </Link>
@@ -95,14 +105,16 @@ const MainNavbar = () => {
           <li>
             <Link
               href="/products"
-              className="text-base no-underline hover:underline"
+              className={`text-base hover:underline ${
+                pathname === "/products" ? "underline" : "no-underline"
+              }`}
             >
               Product
             </Link>
           </li>
           <li>
             <Link href="/" className="text-base no-underline hover:underline">
-              Activity
+              About
             </Link>
           </li>
         </ul>

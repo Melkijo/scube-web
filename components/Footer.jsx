@@ -9,7 +9,7 @@ export default function Footer() {
     <>
       <div
         id="footer"
-        className=" bg-[#0F1035] pt-10 pb-5 px-5 md:px-20 text-white"
+        className=" bg-[#0F1035] pt-10 pb-5 px-5 lg:px-20 text-white"
       >
         <div className="max-w-[1520px]   m-auto flex md:flex-row flex-col  gap-10 md:justify-between">
           <div className="flex flex-row md:flex-col gap-5 md:items-start items-center">
@@ -160,7 +160,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-[#000000] py-5 px-5 md:px-20">
+      <div className="bg-[#000000] py-5 px-5 lg:px-20">
         <p className="text-center md:text-end text-white text-xs md:text-sm font-light">
           © 2024 S-CUBE CENTER. All Rights Reserved.
         </p>

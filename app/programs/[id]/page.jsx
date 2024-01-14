@@ -17,9 +17,6 @@ export default function Page({ params }) {
     .filter((program) => program.id !== targetId)
     .slice(0, 3);
   // Check if a program with the specified id was found
-  if (!selectedProgram) {
-    return <div>No program found for the specified id</div>;
-  }
 
   // Function to shuffle an array
   const shuffleArray = (array) => {
@@ -43,11 +40,13 @@ export default function Page({ params }) {
   );
 
   console.log(selectedProgram);
-
+  if (!selectedProgram) {
+    return <div>No program found for the specified id</div>;
+  }
   return (
     <>
       <MainNavbar />
-      <div className="max-w-[1520px] m-auto px-5 md:px-64 pt-8 pb-14">
+      <div className="max-w-[1520px] m-auto px-5 lg:px-64 pt-8 pb-14">
         <h1 className="text-[28px] md:text-[56px]">{selectedProgram.title}</h1>
         <Image
           src={selectedProgram.thumbnail}
@@ -74,7 +73,7 @@ export default function Page({ params }) {
         </div>
       </div>
       <div className="w-full bg-yellow-200">
-        <div className="max-w-[1520px] m-auto px-5 md:px-64 pt-10 pb-16">
+        <div className="max-w-[1520px] m-auto px-5 lg:px-64 pt-10 pb-16">
           <h2 className="text-[28px] md:text-[36px] text-center font-bold pb-10">
             OTHER PROGRAM
           </h2>

@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function Page() {
   const parsedData = JSON.parse(jsonData);
 
-  const itemsPerPage = 5;
+  const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
 
   // Calculate the index range for the current page
@@ -32,10 +32,10 @@ export default function Page() {
       >
         <h1 className="text-[42px] text-white text">PRODUCT</h1>
       </div>
-      <div className="max-w-[1520px] m-auto pt-10 pb-16 px-5 md:px-20">
+      <div className="max-w-[1520px] m-auto pt-10 pb-16 px-5 lg:px-20">
         <h2 className=" text-2xl md:text-[36px] font-bold mb-5">View All</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 mb-5 gap-3 md:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mb-5 gap-3 md:gap-10">
           {currentItems.map((item) => (
             <CardProduct {...item} />
           ))}

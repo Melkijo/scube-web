@@ -25,11 +25,11 @@ export default function Page() {
       <main>
         <div
           id="banner"
-          className="w-full  bg-gradient-to-r from-fuchsia-500 to-cyan-500 h-52 px-5 flex justify-center items-center md:px-20"
+          className="w-full  bg-gradient-to-r from-fuchsia-500 to-cyan-500 h-52 px-5 flex justify-center items-center lg:px-20"
         >
-          <h1 className="text-[42px] text-white text">PROGRAM</h1>
+          <h1 className="text-[42px] text-white ">PROGRAM</h1>
         </div>
-        <div className="max-w-[1520px] m-auto px-5 md:px-20">
+        <div className="max-w-[1520px] m-auto px-5 lg:px-20">
           <CardProgramLeft {...program1} />
           <CardProgramRight {...program1} />
           <CardProgramLeft {...program1} />

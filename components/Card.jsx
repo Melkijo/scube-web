@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 const CardAbout = (props) => {
@@ -32,9 +33,9 @@ const CardProduct = (props) => {
         className="h-36 md:h-56 object-cover"
       />
       <div className="px-3 border-t-2 border-black py-3">
-        <div className="flex justify-between flex-wrap  mb-3">
+        <div className="flex flex-col sm:flex-row justify-between  mb-3">
           <h2 className="text-sm font-semibold md:text-base line-clamp-1">
-            {props.title}
+            {props.title.replace(/-/g, " ")}
           </h2>
           <p className="line-clamp-3 text-sm md:text-base">Rp. {props.price}</p>
         </div>
@@ -127,8 +128,8 @@ const CardProgramLeft = (props) => {
         </div>
       </div>
       <div className=" pe-5 ps-5 pb-5 md:ps-0 md:pe-10 ">
-        <h1 className="text-[24px] md:text-[36px]">{props.title}</h1>
-        <p className="mb-3">{props.description}</p>
+        <h1 className="text-[24px] mb-3 md:text-[36px]">{props.title}</h1>
+        <p className="mb-3 line-clamp-6">{props.description}</p>
         <Link href={`/programs/${props.id}`} className="underline">
           Read More
         </Link>
@@ -141,8 +142,8 @@ const CardProgramRight = (props) => {
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-2 my-10 items-center gap-8 bg-white hover:bg-blue-400 hover:text-white">
       <div className="w-full md:order-first order-last pe-5 ps-5 pb-5 md:ps-6 md:pe-10 ">
-        <h1 className="text-[24px] md:text-[36px]">{props.title}</h1>
-        <p className="mb-3">{props.description}</p>
+        <h1 className="text-[24px] mb-3 md:text-[36px]">{props.title}</h1>
+        <p className="mb-3 line-clamp-6">{props.description}</p>
         <Link href={`/programs/${props.id}`} className="underline">
           Read More
         </Link>

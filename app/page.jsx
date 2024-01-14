@@ -131,7 +131,7 @@ export default function Home() {
               height={500}
               className="absolute right-0 top-60 md:top-32 animate-slow-right w-[300px] md:w-[500px] h-[300px] md:h-[500px]  object-cover"
             />
-            <h1 className="relative z-10 font-display pt-40 md:pt-32 px-10 font-medium uppercase text-[22px] md:text-[48px] text-center w-full md:w-[1000px]  leading-normal md:leading-[85px]  m-auto">
+            <h1 className="relative z-10 font-display pt-40 md:pt-32 px-10 font-medium uppercase text-[22px] md:text-[48px] text-center w-full lg:w-[1000px]  leading-normal md:leading-[85px]  m-auto">
               Where{" "}
               <span className="text-[#FFDA57] underline">
                 <TypeAnimation
@@ -185,7 +185,7 @@ export default function Home() {
           </Marquee>
         </div>
 
-        <div id="about" className="max-w-[1520px] m-auto px-5 md:px-20 pb-10">
+        <div id="about" className="max-w-[1520px] m-auto px-5 lg:px-20 pb-10">
           <div className=" rounded-lg m-auto relative z-10 pt-20 bg-white">
             <VideoPlayer />
             <small>inauguration of the scube center and cultural stage</small>
@@ -201,7 +201,7 @@ export default function Home() {
               business, and others.
             </p>
           </div>
-          <div className=" hidden md:flex items-center justify-center gap-[50px] ">
+          <div className=" hidden lg:flex items-center justify-center gap-[50px] ">
             <div>
               <CardAbout {...aboutItems[0]} />
             </div>
@@ -213,7 +213,7 @@ export default function Home() {
               <CardAbout {...aboutItems[3]} />
             </div>
           </div>
-          <div className=" md:hidden grid grid-cols-2  gap-3 ">
+          <div className=" lg:hidden grid grid-cols-2  gap-3 ">
             <CardAbout {...aboutItems[0]} />
             <CardAbout {...aboutItems[1]} />
 
@@ -222,7 +222,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-[1520px] m-auto pt-10 px-5 flex flex-col justify-center items-center gap-7 md:px-20 pb-10 w-full md:w-[1200px]">
+        <div className="max-w-[1520px] m-auto pt-10 px-5 flex flex-col justify-center items-center gap-7 md:px-20 pb-10 w-full lg:w-[1200px]">
           <h2 className="font-black text-[24px] md:text-[36px] text-center bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             "I recently had the pleasure of experiencing the wonders of Scube
             Center, and I must say, it exceeded all my expectations."
@@ -244,7 +244,7 @@ export default function Home() {
         </div>
 
         <div id="program" className="bg-[#F8FFEC] py-10">
-          <div className="max-w-[1520px] m-auto px-5 md:px-20">
+          <div className="max-w-[1520px] m-auto px-5 lg:px-20">
             <div className="mb-5">
               <h2 className="text-center text-3xl md:text-[38px] font-bold mb-3 md:mb-5">
                 Program
@@ -252,7 +252,7 @@ export default function Home() {
               <p className="text-center">Collaboration with spirit</p>
             </div>
 
-            <div className="flex flex-col md:flex-row   gap-5 md:gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3   gap-5 lg:gap-10">
               {parsedData.slice(0, 3).map((item) => (
                 <CardProgram key={item.id} {...item} />
               ))}
@@ -267,12 +267,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="product" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
+        <div id="product" className="max-w-[1520px] m-auto px-5 lg:px-20 py-10">
           <h2 className="text-center text-3xl md:text-[38px] font-bold mb-3 md:mb-7">
             Product
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10">
             {parsedProducts.map((item) => (
               <CardProduct {...item} />
             ))}
@@ -286,7 +286,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="galery" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
+        <div id="galery" className="max-w-[1520px] m-auto px-5 lg:px-20 py-10">
           <h2 className="text-center text-3xl md:text-[38px] font-bold mb-3 md:mb-7">
             Gallery
           </h2>
@@ -332,9 +332,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="activity" className="bg-[#F8FFEC]">
+        {/* <div id="activity" className="bg-[#F8FFEC] hidden">
           <div className="py-10">
-            <div className=" max-w-[1520px] mb-7 m-auto flex justify-between items-center px-5 md:px-20">
+            <div className=" max-w-[1520px] mb-7 m-auto flex justify-between items-center px-5 lg:px-20">
               <h2 className=" text-3xl  md:text-[38px] font-bold ">Activity</h2>
 
               <Link href="/activities">
@@ -349,27 +349,31 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
-
-        <div id="contact" className="max-w-[1520px] m-auto px-5 md:px-20 py-10">
-          <h2 className="text-center text-3xl  md:text-[38px] font-bold mb-3 md:mb-7">
-            Contact
-          </h2>
-          <div className="flex flex-col md:flex-row gap-5">
-            <Image src={map} alt="hero" width={700} height={500} />
-            <div className="flex flex-col gap-5">
-              <div>
-                <h3 className="font-bold text-xl">Location</h3>
-                <p>Samick Music Corporation</p>
-              </div>
-              <div className="flex md:flex-col gap-5 flex-row  justify-between">
+        </div> */}
+        <div className="w-full bg-[#F8FFEC]">
+          <div
+            id="contact"
+            className="max-w-[1520px] m-auto px-5 lg:px-20 pt-5 pb-10"
+          >
+            <h2 className="text-center text-3xl  md:text-[38px] font-bold mb-3 md:mb-7">
+              Contact
+            </h2>
+            <div className="flex flex-col lg:flex-row gap-5">
+              <Image src={map} alt="hero" width={700} height={500} />
+              <div className="flex flex-col gap-5">
                 <div>
-                  <h3 className="font-bold text-xl">Number</h3>
-                  <p>081775262222</p>
+                  <h3 className="font-bold text-xl">Location</h3>
+                  <p>Samick Music Corporation</p>
                 </div>
-                <div>
-                  <h3 className="font-bold text-xl">Email</h3>
-                  <p>scube@gmail.com</p>
+                <div className="flex md:flex-col gap-5 flex-row  justify-between">
+                  <div>
+                    <h3 className="font-bold text-xl">Number</h3>
+                    <p>081775262222</p>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl">Email</h3>
+                    <p>scube@gmail.com</p>
+                  </div>
                 </div>
               </div>
             </div>
