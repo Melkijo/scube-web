@@ -5,7 +5,12 @@ import hero2 from "@/assets/hero-2.png";
 // import VideoPlayer from '@/components/VideoPlayer'
 import aboutImage from "@/assets/about-item-1.png";
 import dynamic from "next/dynamic";
-import { CardAbout, CardActivity, CardProduct } from "@/components/Card";
+import {
+  CardAbout,
+  CardActivity,
+  CardProduct,
+  CardProgram,
+} from "@/components/Card";
 import { Arrow, ArrowDown, ArrowLeft, ArrowRight } from "@/components/Icons";
 import galery1 from "@/assets/galery-1.png";
 import galery2 from "@/assets/galery-2.png";
@@ -23,7 +28,7 @@ import heroArrow from "@/assets/icons/arrow-hero.png";
 import { TypeAnimation } from "react-type-animation";
 
 import Footer from "@/components/Footer";
-
+import jsonData from "@/data/program.js";
 const VideoPlayer = dynamic(() => import("@/components/VideoPlayer"), {
   ssr: false,
 });
@@ -149,6 +154,7 @@ const activityItems = [
 ];
 
 export default function Home() {
+  const parsedData = JSON.parse(jsonData);
   return (
     <>
       <div className="fixed z-20 w-full ">
@@ -182,11 +188,11 @@ export default function Home() {
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
                     "Ideas",
-                    4000, // wait 1s before replacing "Mice" with "Hamsters"
+                    1500, // wait 1s before replacing "Mice" with "Hamsters"
                     "Student",
-                    4000,
+                    1500,
                     "Spirits",
-                    4000,
+                    1500,
                   ]}
                   wrapper="span"
                   speed={50}
@@ -219,17 +225,20 @@ export default function Home() {
 
         <div id="marquee" className="bg-black py-3 relative z-10 text-white">
           <Marquee autoFill>
-            <div className=" mr-5 font-black text-xs">
+            <div className=" mr-5 font-black text-xs md:text-xl">
               SEOUL NATIONAL UNIVERSITY
             </div>
-            <div className=" mr-5 font-black text-xs">MATARAM UNIVERSITY</div>
-            <div className=" mr-5 font-black text-xs">SAMIC</div>
+            <div className=" mr-5 font-black text-xs md:text-xl">
+              MATARAM UNIVERSITY
+            </div>
+            <div className=" mr-5 font-black text-xs md:text-xl">SAMIC</div>
           </Marquee>
         </div>
 
         <div id="about" className="max-w-[1520px] m-auto px-5 md:px-20 pb-10">
-          <div className=" rounded-lg  relative z-10 pt-20 bg-white">
+          <div className=" rounded-lg m-auto relative z-10 pt-20 bg-white">
             <VideoPlayer />
+            <small>inauguration of the scube center and cultural stage</small>
           </div>
           <div className="py-8">
             <h2 className="text-center  text-2xl md:text-[38px] font-bold mb-4">
@@ -294,8 +303,8 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col md:flex-row   gap-5 md:gap-10">
-              {aboutItems.map((item) => (
-                <CardAbout {...item} />
+              {parsedData.slice(0, 3).map((item) => (
+                <CardProgram key={item.id} {...item} />
               ))}
             </div>
             <div className="flex justify-center">

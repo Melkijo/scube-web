@@ -36,10 +36,10 @@ const MainNavbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/">Program</Link>
+              <Link href="/programs">Program</Link>
             </li>
             <li>
-              <Link href="/">Product</Link>
+              <Link href="/products">Product</Link>
             </li>
             <li>
               <Link href="/">Activity</Link>
@@ -85,12 +85,18 @@ const MainNavbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/" className="text-base no-underline hover:underline">
+            <Link
+              href="/programs"
+              className="text-base no-underline hover:underline"
+            >
               Program
             </Link>
           </li>
           <li>
-            <Link href="/" className="text-base no-underline hover:underline">
+            <Link
+              href="/products"
+              className="text-base no-underline hover:underline"
+            >
               Product
             </Link>
           </li>

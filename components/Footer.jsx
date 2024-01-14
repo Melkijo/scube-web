@@ -9,9 +9,9 @@ export default function Footer() {
     <>
       <div
         id="footer"
-        className="bg-[#0F1035] pt-10 pb-5 px-5 md:px-20 text-white"
+        className=" bg-[#0F1035] pt-10 pb-5 px-5 md:px-20 text-white"
       >
-        <div className="flex md:flex-row flex-col  gap-10 md:justify-between">
+        <div className="max-w-[1520px]   m-auto flex md:flex-row flex-col  gap-10 md:justify-between">
           <div className="flex flex-row md:flex-col gap-5 md:items-start items-center">
             <Image src={logo} alt="logo" className="w-24 h-24" />
             <div>
