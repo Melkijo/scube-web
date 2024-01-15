@@ -237,7 +237,7 @@ export default function Home() {
             <div>
               <h2 className="font-black text-[24px] md:text-[36px] text-center bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 "Scube Center isn't just a facility, it's a hub of creativity,
-                collaboration, and cutting-edge technology."
+                collaboration, and cutting-edge technology"
               </h2>
               <div className="flex gap-3 justify-center items-center mt-5">
                 <Image
