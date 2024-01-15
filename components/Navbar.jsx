@@ -45,7 +45,7 @@ const MainNavbar = () => {
               <Link href="/products">Product</Link>
             </li>
             <li>
-              <Link href="/">Activity</Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
               <h5 className="font-bold pt-3">Follow Us</h5>
@@ -113,7 +113,12 @@ const MainNavbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/" className="text-base no-underline hover:underline">
+            <Link
+              href="/about"
+              className={`text-base hover:underline ${
+                pathname === "/about" ? "underline" : "no-underline"
+              }`}
+            >
               About
             </Link>
           </li>

@@ -1,8 +1,9 @@
 const program = [
     {
         id: 1,
-        title: "KKN inter-galaxy",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur molestias fugiat iusto modi ipsam, libero esse enim quos magni dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores minima sit dolorem modi molestias ratione corporis obcaecati adipisci expedita velit.",
+        title: "KKN international",
+        excerption: "KKN International is a groundbreaking initiative, a collaboration between Universitas Mataram (UNRAM), Seoul National University (SNU), and Universitas Nasional (UNAS). This transformative program unfolds against the breathtaking backdrop of Nusa Tenggara Barat, Indonesia, where academic synergy meets cultural understanding in a powerful blend.",
+        description: "<p>KKN International is a groundbreaking initiative, a collaboration between Universitas Mataram (UNRAM), Seoul National University (SNU), and Universitas Nasional (UNAS). This transformative program unfolds against the breathtaking backdrop of Nusa Tenggara Barat, Indonesia, where academic synergy meets cultural understanding in a powerful blend.</p><br/><p>Rooted in the principles of knowledge exchange and social responsibility, KKN International stands as a beacon of global cooperation. The program operates twice a year, enriching both the summer and winter seasons with its dynamic presence.</p><br/><p>Nusa Tenggara Barat, renowned for its diverse landscapes and vibrant local cultures, serves as the perfect canvas for KKN International's endeavors. Participants, drawn from UNRAM, SNU, and UNAS, converge to immerse themselves in the rich tapestry of this Indonesian province, fostering cross-cultural learning and building lasting connections.</p><br/><p>The summer and winter sessions each bring a unique flavor to the program. In the balmy months of summer, participants engage in community-driven projects that address local challenges, from sustainable development to cultural preservation. Meanwhile, the winter session offers a distinct experience, aligning with the region's cooler climate, and focuses on initiatives that cater to the specific needs of the community during this season.</p><br/><p>Throughout the program, students work in tandem with local communities, leveraging their academic knowledge and skills to devise solutions that positively impact the region. Whether it's contributing to environmental conservation, empowering local businesses, or collaborating on educational initiatives, KKN International provides a platform for participants to make a tangible difference in the lives of Nusa Tenggara Barat's residents.</p><br/><p>As a collaborative venture between three esteemed universities, KKN International not only elevates the educational experience of its participants but also fosters a sense of global citizenship and interconnectedness. The program stands as a beacon of international cooperation, illustrating the power of academia to transcend borders and create positive change on a local scale.</p>",
         thumbnail: "https://firebasestorage.googleapis.com/v0/b/scube-center.appspot.com/o/Salinan%20dari%20IMG_9337.png?alt=media&token=0409b10d-8fe0-4e92-a66e-419dd9bc6215",
         arrayImage: [
             "https://firebasestorage.googleapis.com/v0/b/scube-center.appspot.com/o/IMG_7869.png?alt=media&token=4be3657e-dc30-4827-b7d6-72479cdf3a8f",
@@ -13,8 +14,9 @@ const program = [
     },
     {
         id: 2,
-        title: "Program 2",
-        description: "Description 2",
+        title: "S-Farm",
+        excerption: "S-Farm, short for Smart Farm, stands at the forefront of agricultural innovation, introducing cutting-edge technology to transform traditional farming into a seamless and automated experience. The pioneering project begins its journey at the Haramain Boarding School, where a green revolution takes place within the confines of a state-of-the-art greenhouse.",
+        description: "<p>S-Farm, short for Smart Farm, stands at the forefront of agricultural innovation, introducing cutting-edge technology to transform traditional farming into a seamless and automated experience. The pioneering project begins its journey at the Haramain Boarding School, where a green revolution takes place within the confines of a state-of-the-art greenhouse.</p><br/><p>At the heart of S-Farm lies a commitment to harnessing the power of automation, data analytics, and smart technologies to optimize the entire farming process. The program envisions a future where agriculture seamlessly integrates with advancements in artificial intelligence, sensors, and robotics, paving the way for efficient, sustainable, and high-yielding farms.</p><br/><p>The Haramain Boarding School serves as an ideal testing ground for the implementation of S-Farm technology. The greenhouse, equipped with the latest innovations, becomes a living laboratory where traditional farming practices meet the digital age. Automated irrigation systems, precision farming techniques, and real-time monitoring converge to create an environment where crops thrive with minimal human intervention.</p><br/><p>Key features of the S-Farm program at Haramain Boarding School include:</p><br/><ol><li><strong>Automated Irrigation Systems:</strong> S-Farm employs sensor-based irrigation systems that analyze soil moisture levels and weather conditions in real-time. This ensures that crops receive precisely the amount of water they need, promoting water conservation and preventing over-irrigation.</li><li><strong>Data-Driven Decision-Making:</strong> The integration of data analytics allows for informed decision-making. S-Farm collects and analyzes data on soil health, crop growth patterns, and environmental conditions, empowering farmers with valuable insights to optimize crop yields and resource utilization.</li><li><strong>Robotics in Farming:</strong> S-Farm introduces robotic technologies for tasks such as planting, harvesting, and weeding. These robotic assistants operate efficiently, reducing labor costs and increasing overall productivity.</li><li><strong>Smart Greenhouse Management:</strong> The greenhouse is equipped with smart systems that control temperature, humidity, and light conditions. This level of control ensures an optimal environment for plant growth, enabling year-round cultivation and protection from external factors.</li><li><strong>Education and Training:</strong> The S-Farm program at Haramain Boarding School emphasizes education and training in agricultural technology. Students and farmers alike are provided with the knowledge and skills needed to adapt to and benefit from these technological advancements.</li></ol><br/><p>As S-Farm takes root in Haramain Boarding School, it serves as a beacon of inspiration for the broader agricultural community. The program not only enhances efficiency and sustainability but also lays the groundwork for a future where smart farming practices contribute to global food security and environmental stewardship. S-Farm at Haramain Boarding School is not just a project; it's a transformative journey toward a smarter, more resilient agricultural landscape.</p>",
         thumbnail: "https://picsum.photos/200/300",
         arrayImage: [
             "https://picsum.photos/200/300",
@@ -24,8 +26,9 @@ const program = [
     },
     {
         id: 3,
-        title: "Program 3",
-        description: "Description 3",
+        title: "S-Sybotic",
+        excerption: "S-Sybotic emerges as a groundbreaking advancement in robotic technology, specifically designed to enhance precision and efficiency in handling substantial objects. At the core of its capabilities lies a robust and adaptable robotic arm, engineered to excel in the art of grasping and manipulating sizable items with unparalleled dexterity.",
+        description: " <p>S-Sybotic emerges as a groundbreaking advancement in robotic technology, specifically designed to enhance precision and efficiency in handling substantial objects. At the core of its capabilities lies a robust and adaptable robotic arm, engineered to excel in the art of grasping and manipulating sizable items with unparalleled dexterity.</p><br/><p>This cutting-edge robotic arm is meticulously crafted to meet the demands of diverse industries, offering a scalable solution that combines strength, agility, and intelligent control. The primary objective of S-Sybotic is to streamline operations that involve the manipulation of larger objects, reducing human intervention and ensuring tasks are executed with utmost accuracy.</p>",
         thumbnail: "https://picsum.photos/200/300",
         arrayImage: [
             "https://picsum.photos/200/300",
@@ -33,28 +36,7 @@ const program = [
             "https://picsum.photos/200/300"
         ]
     },
-    {
-        id: 4,
-        title: "Program 4",
-        description: "Description 4",
-        thumbnail: "https://picsum.photos/200/300",
-        arrayImage: [
-            "https://picsum.photos/200/300",
-            "https://picsum.photos/200/300",
-            "https://picsum.photos/200/300"
-        ]
-    },
-    {
-        id: 5,
-        title: "Program 5",
-        description: "Description 5",
-        thumbnail: "https://picsum.photos/200/300",
-        arrayImage: [
-            "https://picsum.photos/200/300",
-            "https://picsum.photos/200/300",
-            "https://picsum.photos/200/300"
-        ]
-    }
+
 
 ];
 

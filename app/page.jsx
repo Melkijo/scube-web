@@ -11,7 +11,16 @@ import {
   CardProduct,
   CardProgram,
 } from "@/components/Card";
-import { Arrow, ArrowDown, ArrowLeft, ArrowRight } from "@/components/Icons";
+import {
+  Arrow,
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  innovation,
+  collaboration,
+  sustainability,
+  socialEmpowerment,
+} from "@/components/Icons";
 import galery1 from "@/assets/galery-1.png";
 import galery2 from "@/assets/galery-2.png";
 import galery3 from "@/assets/galery-3.png";
@@ -19,6 +28,9 @@ import galery4 from "@/assets/galery-4.png";
 import galery5 from "@/assets/galery-5.png";
 import galery6 from "@/assets/galery-6.png";
 import galery7 from "@/assets/galery-7.png";
+import testimoni1 from "@/assets/testimoni-1.jpg";
+import testimoni2 from "@/assets/team-2.png";
+
 import Marquee from "react-fast-marquee";
 import map from "@/assets/map.png";
 import Link from "next/link";
@@ -30,6 +42,8 @@ import { TypeAnimation } from "react-type-animation";
 import Footer from "@/components/Footer";
 import jsonData from "@/data/program.js";
 import jsonDataProduct from "@/data/products";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const VideoPlayer = dynamic(() => import("@/components/VideoPlayer"), {
   ssr: false,
@@ -39,66 +53,30 @@ const aboutItems = [
   {
     id: 1,
     title: "Innovation",
-
-    desc: "S-Cube Center is dedicated to fostering innovation in various domains, including technology, education, and business. ",
-    image: aboutImage,
-    color: "#FF9BD2",
+    desc: "Dedicated to fostering innovation in various domains",
+    image: innovation,
+    color: "F4F27E",
   },
   {
     id: 2,
     title: "Collaboration",
-    desc: "The collaboration between SNU, Samick, and a focus on sustainability underscores the importance of partnerships.",
-    image: aboutImage,
+    desc: "Collaboration between SNU, Samick, and a focus on sustainability",
+    image: collaboration,
+    color: "00A9FF",
   },
   {
     id: 3,
     title: "Sustainability",
-    desc: " The center recognizes the importance of long-term impact and responsible practices in technology, education, business, and other areas. ",
-    image: aboutImage,
+    desc: " The center recognizes the importance of long-term impact and responsible  ",
+    image: sustainability,
+    color: "00A9FF",
   },
   {
     id: 4,
     title: "Social Empowerment",
-    desc: "This value reflects a commitment to using innovation and collaboration to positively influence and uplift communities. ",
-    image: aboutImage,
-  },
-];
-
-const activityItems = [
-  {
-    id: 1,
-    title: "SNU",
-    date: "12/12/2021",
-    image: galery1,
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "Samick",
-    date: "12/12/2021",
-    image: aboutImage,
-    link: "/",
-  },
-  {
-    id: 3,
-    title: "Sustainability",
-    date: "12/12/2021",
-    image: aboutImage,
-    link: "/",
-  },
-  {
-    id: 4,
-    title: "Sustainability",
-    date: "12/12/2021",
-    image: aboutImage,
-    link: "/",
-  },
-  {
-    id: 5,
-    title: "Sustainability",
-    date: "12/12/2021",
-    image: aboutImage,
-    link: "/",
+    desc: "Commitment to using innovation and collaboration to positively influence communities. ",
+    image: socialEmpowerment,
+    color: "F4F27E",
   },
 ];
 
@@ -201,7 +179,7 @@ export default function Home() {
               business, and others.
             </p>
           </div>
-          <div className=" hidden lg:flex items-center justify-center gap-[50px] ">
+          <div className=" hidden lg:grid grid-cols-3 items-center justify-center gap-[50px] ">
             <div>
               <CardAbout {...aboutItems[0]} />
             </div>
@@ -223,24 +201,60 @@ export default function Home() {
         </div>
 
         <div className="max-w-[1520px] m-auto pt-10 px-5 flex flex-col justify-center items-center gap-7 md:px-20 pb-10 w-full lg:w-[1200px]">
-          <h2 className="font-black text-[24px] md:text-[36px] text-center bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-            "I recently had the pleasure of experiencing the wonders of Scube
-            Center, and I must say, it exceeded all my expectations."
-          </h2>
-          <div className="flex gap-3 items-center">
-            <Image
-              src={galery2}
-              width={100}
-              height={100}
-              className="h-14 md:h-24 w-14 md:w-24 rounded-full object-cover"
-            />
+          <Carousel
+            showArrows={false}
+            showThumbs={false}
+            showIndicators={false}
+            showStatus={false}
+            infiniteLoop={true}
+            autoPlay={true}
+            interval={3000}
+            stopOnHover={false}
+            className="w-full"
+          >
             <div>
-              <h5 className="font-black text-sm md:text-lg">
-                Melki Jonathan Andara
-              </h5>
-              <p className="text-xs md:text-base">CEO of MejoTech</p>
+              <h2 className="font-black text-[24px] md:text-[36px] text-center bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                "I recently had the pleasure of experiencing the wonders of
+                Scube Center, and I must say, it exceeded all my expectations."
+              </h2>
+              <div className="flex gap-3 justify-center items-center mt-5">
+                <Image
+                  src={testimoni1}
+                  width={200}
+                  height={200}
+                  className="max-w-24 w-14 md:w-24 rounded-full object-cover"
+                />
+                <div className="">
+                  <h5 className="font-black text-sm  text-left md:text-lg">
+                    Melki Jonathan Andara
+                  </h5>
+                  <p className="text-xs text-left md:text-base">
+                    Voluteer KKN Winter 2023
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
+            <div>
+              <h2 className="font-black text-[24px] md:text-[36px] text-center bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                "Scube Center isn't just a facility, it's a hub of creativity,
+                collaboration, and cutting-edge technology."
+              </h2>
+              <div className="flex gap-3 justify-center items-center mt-5">
+                <Image
+                  src={testimoni2}
+                  width={200}
+                  height={200}
+                  className="max-w-24 w-14 md:w-24 rounded-full object-cover "
+                />
+                <div className="">
+                  <h5 className="font-black text-sm  text-left md:text-lg">
+                    I Wayan Agus Arimbawa
+                  </h5>
+                  <p className="text-xs text-left md:text-base">Directure</p>
+                </div>
+              </div>
+            </div>
+          </Carousel>
         </div>
 
         <div id="program" className="bg-[#F8FFEC] py-10">
@@ -290,8 +304,8 @@ export default function Home() {
           <h2 className="text-center text-3xl md:text-[38px] font-bold mb-3 md:mb-7">
             Gallery
           </h2>
-          <div className="flex flex-col gap-5">
-            <div className="flex gap-5">
+          <div className="flex flex-col gap-2 md:gap-5">
+            <div className="flex gap-2 md:gap-5">
               <div>
                 <Image
                   src={galery1}
@@ -305,7 +319,7 @@ export default function Home() {
                 <Image src={galery2} alt="hero" width={600} height={500} />
               </div>
             </div>
-            <div className="flex gap-5">
+            <div className="flex  gap-2 md:gap-5">
               <div>
                 <Image src={galery3} alt="hero" width={500} height={500} />
               </div>
@@ -316,7 +330,7 @@ export default function Home() {
                 <Image src={galery5} alt="hero" width={500} height={500} />
               </div>
             </div>
-            <div className="flex gap-5">
+            <div className="flex  gap-2 md:gap-5">
               <div>
                 <Image src={galery6} alt="hero" width={600} height={500} />
               </div>
@@ -359,11 +373,27 @@ export default function Home() {
               Contact
             </h2>
             <div className="flex flex-col lg:flex-row gap-5">
-              <Image src={map} alt="hero" width={700} height={500} />
+              <Link
+                href="https://maps.app.goo.gl/pvaBZtr3xfrjYJF37"
+                className="w-full lg:w-[700px] overflow-hidden"
+                target="_blank"
+              >
+                <Image
+                  src={map}
+                  alt="hero"
+                  width={700}
+                  height={500}
+                  className="w-full hover:scale-105 transition-all duration-500 ease-in-out"
+                />
+              </Link>
+
               <div className="flex flex-col gap-5">
                 <div>
                   <h3 className="font-bold text-xl">Location</h3>
-                  <p>Samick Music Corporation</p>
+                  <p>
+                    Building A Level 3 Faculty of Engineering, University of
+                    Mataram
+                  </p>
                 </div>
                 <div className="flex md:flex-col gap-5 flex-row  justify-between">
                   <div>
@@ -372,7 +402,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl">Email</h3>
-                    <p>scube@gmail.com</p>
+                    <p>scube@unram.ac.id</p>
                   </div>
                 </div>
               </div>

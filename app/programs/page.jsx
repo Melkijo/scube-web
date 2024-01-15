@@ -17,6 +17,9 @@ export default function Page() {
   //get program data 1 from jsonData
   const parsedData = JSON.parse(jsonData);
   const program1 = parsedData.find((program) => program.id === 1);
+  const program2 = parsedData.find((program) => program.id === 2);
+
+  const program3 = parsedData.find((program) => program.id === 3);
 
   console.log(program1);
   return (
@@ -31,8 +34,8 @@ export default function Page() {
         </div>
         <div className="max-w-[1520px] m-auto px-5 lg:px-20">
           <CardProgramLeft {...program1} />
-          <CardProgramRight {...program1} />
-          <CardProgramLeft {...program1} />
+          <CardProgramRight {...program2} />
+          <CardProgramLeft {...program3} />
           <div className="h-96 w-0.5 rounded-full bg-gray-400  m-auto"></div>
           <h5 className="text-center text-sm md:text-base font-medium text-gray-400  my-10 w-full md:w-[500px]  m-auto">
             Exciting news! A new and improved program is on the horizon,

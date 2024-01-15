@@ -6,8 +6,12 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { CardProduct } from "@/components/Card";
+import Image from "next/image";
+import shirtSize from "@/assets/size.png";
+
 export default function Page({ params }) {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
   const [size, setSize] = useState("M");
 
   const handleSizeChange = (newSize) => {
@@ -47,6 +51,7 @@ export default function Page({ params }) {
 
   const handleBuyNow = () => {
     // alert(`${size} ${selectedProduct.title}`);
+    setLoading(true);
     router.push(
       `https://wa.me/6281775262221?text=I%20want%20to%20buy%20your%20Cloth%20${modifiedTitle}%20with%20size%20${size}`
     );
@@ -68,7 +73,7 @@ export default function Page({ params }) {
               key={selectedProduct.id}
               width="500"
               height="500"
-              className="w-full h-64 md:h-[500px] object-contain pt-2 pb-4 md:pb-8"
+              className="w-full h-64 md:h-[500px] object-contain  pt-2 pb-4 md:pb-8"
             />
           </div>
           <div className="w-full">
@@ -78,6 +83,9 @@ export default function Page({ params }) {
             <p className="text-lg">Rp. {selectedProduct.price}</p>
             <div className="pt-5 pb-8">
               <h5 className="font-bold text-xl mb-2">Size</h5>
+              <div>
+                <Image src={shirtSize} className="w-full h-full object-cover" />
+              </div>
               <div className="grid grid-cols-5 gap-5">
                 <button
                   className={`btn btn-outline rounded-sm w-full  ${
@@ -126,10 +134,14 @@ export default function Page({ params }) {
               target="_blank"
             > */}
             <button
-              className="btn btn-outline rounded-sm w-full mb-5"
+              className="btn btn-outline rounded-sm w-full mb-5 "
               onClick={handleBuyNow}
+              disabled={loading}
             >
-              Buy Now
+              Buy Now{" "}
+              {loading == true ? (
+                <span className="ml-3 loading loading-spinner loading-sm"></span>
+              ) : null}
             </button>
             {/* </Link> */}
 

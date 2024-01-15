@@ -1,22 +1,27 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import parse from "html-react-parser";
 const CardAbout = (props) => {
+  //   const iconBackgroundColor = `bg-[${props.color}] flex justify-center items-center h-40`;
+  //   console.log(iconBackgroundColor);
   return (
     <div
-      className={`border border-[#B8B8B8]  rounded-lg pt-5  bg-[${props.color}] w-full `}
+      className={`border border-[#B8B8B8]   rounded-lg   w-full overflow-hidden`}
       key={props.id}
     >
-      <Image
-        src={props.image}
-        alt="hero"
-        width={500}
-        height={300}
-        className="h-36 md:h-48  object-cover"
-      />
+      {}
+      <div
+        className={` flex justify-center items-center h-40`}
+        style={{ backgroundColor: `#${props.color}` }}
+      >
+        <props.image width="100" height="100" />
+      </div>
       <div className="pt-3 pb-5 px-3  text-center">
-        <h2 className="text-lg md:text-2xl font-semibold">{props.title}</h2>
-        <p className="text-sm line-clamp-3 md:text-base">{props.desc}</p>
+        <h2 className="text-lg md:text-2xl font-semibold pb-2">
+          {props.title}
+        </h2>
+        <p className="text-sm line-clamp-4 md:text-base">{parse(props.desc)}</p>
       </div>
     </div>
   );
@@ -24,7 +29,10 @@ const CardAbout = (props) => {
 
 const CardProduct = (props) => {
   return (
-    <div className=" border border-black bg-white" key={props.id}>
+    <div
+      className=" border border-black bg-white rounded-md overflow-hidden"
+      key={props.id}
+    >
       <Image
         src={props.image}
         alt="hero"
@@ -78,7 +86,7 @@ const CardProgram = (props) => {
   return (
     <Link
       href={`/programs/${props.id}`}
-      className={`border border-[#1a1a1a] hover:border-none rounded-lg   bg-white text-black hover:text-white hover:bg-red-400 w-full  overflow-hidden`}
+      className={`border border-[#1a1a1a] hover:border-none rounded-lg   bg-white text-black hover:text-white hover:bg-[#00A9FF] w-full  overflow-hidden`}
       key={props.id}
     >
       <Image
@@ -92,7 +100,7 @@ const CardProgram = (props) => {
         <h2 className="text-lg md:text-2xl font-semibold mb-3">
           {props.title}
         </h2>
-        <p className="text-xs line-clamp-2 md:text-base">{props.description}</p>
+        <p className="text-xs line-clamp-2 md:text-base">{props.excerption}</p>
       </div>
     </Link>
   );
@@ -100,7 +108,7 @@ const CardProgram = (props) => {
 
 const CardProgramLeft = (props) => {
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-2 my-10 items-center gap-3 md:gap-8 bg-white hover:bg-orange-400 hover:text-white">
+    <div className=" grid grid-cols-1 md:grid-cols-2 my-10 items-center gap-3 md:gap-8 bg-white hover:bg-[#eace4d] hover:text-white">
       <div className="flex w-full flex-col gap-1  bg-white overflow-hidden">
         <Image
           src={props.thumbnail}
@@ -116,20 +124,20 @@ const CardProgramLeft = (props) => {
             alt="logo"
             width="500"
             height="500"
-            className="w-[50%] h-24 object-cover "
+            className="w-[50%] h-48 object-cover "
           />
           <Image
             src={props.arrayImage[1]}
             alt="logo"
             width="500"
             height="500"
-            className="w-[50%] h-24 object-cover "
+            className="w-[50%] h-48 object-cover "
           />
         </div>
       </div>
       <div className=" pe-5 ps-5 pb-5 md:ps-0 md:pe-10 ">
         <h1 className="text-[24px] mb-3 md:text-[36px]">{props.title}</h1>
-        <p className="mb-3 line-clamp-6">{props.description}</p>
+        <p className="mb-3 line-clamp-5">{parse(props.excerption)}</p>
         <Link href={`/programs/${props.id}`} className="underline">
           Read More
         </Link>
@@ -143,7 +151,7 @@ const CardProgramRight = (props) => {
     <div className="w-full grid grid-cols-1 md:grid-cols-2 my-10 items-center gap-8 bg-white hover:bg-blue-400 hover:text-white">
       <div className="w-full md:order-first order-last pe-5 ps-5 pb-5 md:ps-6 md:pe-10 ">
         <h1 className="text-[24px] mb-3 md:text-[36px]">{props.title}</h1>
-        <p className="mb-3 line-clamp-6">{props.description}</p>
+        <p className="mb-3 line-clamp-5">{parse(props.excerption)}</p>
         <Link href={`/programs/${props.id}`} className="underline">
           Read More
         </Link>
@@ -162,14 +170,14 @@ const CardProgramRight = (props) => {
             alt="logo"
             width="500"
             height="500"
-            className="w-[50%] h-24 object-cover "
+            className="w-[50%] h-48 object-cover "
           />
           <Image
             src={props.arrayImage[1]}
             alt="logo"
             width="500"
             height="500"
-            className="w-[50%] h-24 object-cover "
+            className="w-[50%] h-48 object-cover "
           />
         </div>
       </div>

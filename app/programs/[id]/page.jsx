@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { MainNavbar } from "@/components/Navbar";
 import jsonData from "@/data/program.js";
 import Image from "next/image";
+import parse from "html-react-parser";
 
 export default function Page({ params }) {
   const parsedData = JSON.parse(jsonData);
@@ -39,7 +40,6 @@ export default function Page({ params }) {
     (program) => program.id !== targetId
   );
 
-  console.log(selectedProgram);
   if (!selectedProgram) {
     return <div>No program found for the specified id</div>;
   }
@@ -54,9 +54,9 @@ export default function Page({ params }) {
           key={selectedProgram.id}
           width="500"
           height="500"
-          className="w-full h-64 md:h-96 object-cover pt-2 pb-4 md:pb-8"
+          className="w-full h-64 md:h-[500px] object-cover pt-2 pb-4 md:pb-8"
         />
-        <p>{selectedProgram.description}</p>
+        <p>{parse(selectedProgram.description)}</p>
 
         <h3 className="text-xl font-semibold mt-10 mb-5">Documentation</h3>
         <div className="grid grid-cols-2 gap-3 overflow-hidden">

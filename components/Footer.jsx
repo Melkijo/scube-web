@@ -33,7 +33,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/programs"
                   className=" hover:underline hover:underline-offset-4"
                 >
                   - Program
@@ -41,26 +41,19 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/products"
                   className=" hover:underline hover:underline-offset-4"
                 >
                   - Product
                 </Link>
               </li>
+
               <li>
                 <Link
-                  href="/"
+                  href="/about"
                   className=" hover:underline hover:underline-offset-4"
                 >
-                  - Galery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className=" hover:underline hover:underline-offset-4"
-                >
-                  - Activity
+                  - About
                 </Link>
               </li>
             </ul>
@@ -69,9 +62,11 @@ export default function Footer() {
           <div className=" hidden md:block ">
             <h5 className="font-bold text-lg  mb-3">Contact</h5>
             <div className="flex flex-col gap-3">
-              <p>Location</p>
-              <p>Number</p>
-              <p>Email</p>
+              <p className="w-72">
+                Building A Level 3 Faculty of Engineering, University of Mataram
+              </p>
+              <p>+6281775262221</p>
+              <p>scube@unram.ac.id</p>
             </div>
           </div>
 
@@ -89,7 +84,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="/prgrams"
                     className=" hover:underline hover:underline-offset-4"
                   >
                     - Program
@@ -97,26 +92,19 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="/products"
                     className=" hover:underline hover:underline-offset-4"
                   >
                     - Product
                   </Link>
                 </li>
+
                 <li>
                   <Link
-                    href="/"
+                    href="/about"
                     className=" hover:underline hover:underline-offset-4"
                   >
-                    - Galery
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className=" hover:underline hover:underline-offset-4"
-                  >
-                    - Activity
+                    - About
                   </Link>
                 </li>
               </ul>
@@ -125,9 +113,12 @@ export default function Footer() {
             <div>
               <h5 className="font-bold text-lg  mb-3">Contact</h5>
               <div className="flex flex-col gap-3">
-                <p>Location</p>
-                <p>Number</p>
-                <p>Email</p>
+                <p>
+                  Building A Level 3 Faculty of Engineering, University of
+                  Mataram
+                </p>
+                <p>+6281775262221</p>
+                <p>scube@unram.ac.id</p>
               </div>
             </div>
           </div>
@@ -159,11 +150,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      <div className="bg-[#000000] py-5 px-5 lg:px-20">
-        <p className="text-center md:text-end text-white text-xs md:text-sm font-light">
-          © 2024 S-CUBE CENTER. All Rights Reserved.
-        </p>
+      <div className=" bg-[#000000]">
+        <div className="max-w-[1520px]   m-auto  py-5 px-5 md:px-0">
+          <p className="text-center md:text-end text-white text-xs md:text-sm font-light">
+            © 2024 S-CUBE CENTER. All Rights Reserved.
+          </p>
+        </div>
       </div>
     </>
   );
