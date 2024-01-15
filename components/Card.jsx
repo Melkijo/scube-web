@@ -21,7 +21,7 @@ const CardAbout = (props) => {
         <h2 className="text-lg md:text-2xl font-semibold pb-2">
           {props.title}
         </h2>
-        <p className="text-sm line-clamp-4 md:text-base">{parse(props.desc)}</p>
+        <p className="text-sm  md:text-base">{parse(props.desc)}</p>
       </div>
     </div>
   );
