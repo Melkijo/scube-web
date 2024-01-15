@@ -250,7 +250,9 @@ export default function Home() {
                   <h5 className="font-black text-sm  text-left md:text-lg">
                     I Wayan Agus Arimbawa
                   </h5>
-                  <p className="text-xs text-left md:text-base">Directure</p>
+                  <p className="text-xs text-left md:text-base">
+                    Program and Cooperation
+                  </p>
                 </div>
               </div>
             </div>

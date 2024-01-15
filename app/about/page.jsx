@@ -14,6 +14,8 @@ import map from "@/assets/map.png";
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.png";
 import team3 from "@/assets/team-3.png";
+import team4 from "@/assets/team-4.png";
+
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
@@ -125,7 +127,7 @@ export default function Page() {
           <h2 className="text-center  text-2xl md:text-[38px] font-bold mb-8">
             Our Team
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="w-full lg:w-[50%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="flex flex-col items-center gap-3">
               <Image
                 src={team1}
@@ -135,19 +137,7 @@ export default function Page() {
               />
               <div>
                 <h3 className="font-bold text-lg">Prof Jun-Seok Hwang</h3>
-                <p className="text-center text-base">Director</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center gap-3">
-              <Image
-                src={team2}
-                width={500}
-                height={500}
-                className="w-60 h-60 object-fill"
-              />
-              <div>
-                <h3 className="font-bold text-lg">I Wayan Agus Arimbawa</h3>
-                <p className="text-center text-base">Director</p>
+                <p className="text-center text-base">Advisory</p>
               </div>
             </div>
             <div className="flex flex-col items-center gap-3">
@@ -159,7 +149,31 @@ export default function Page() {
               />
               <div>
                 <h3 className="font-bold text-lg">Budi Irmawati</h3>
-                <p className="text-center text-base">Director</p>
+                <p className="text-center text-base">General Manager</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Image
+                src={team4}
+                width={500}
+                height={500}
+                className="w-60 h-60 object-fill"
+              />
+              <div>
+                <h3 className="font-bold text-lg">Ida Bagus Ketut Widiartha</h3>
+                <p className="text-center text-base">Deputy Manager</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Image
+                src={team2}
+                width={500}
+                height={500}
+                className="w-60 h-60 object-fill"
+              />
+              <div>
+                <h3 className="font-bold text-lg">I Wayan Agus Arimbawa</h3>
+                <p className="text-center text-base">Program and Cooperation</p>
               </div>
             </div>
           </div>

@@ -1,12 +1,7 @@
 "use client";
 import Footer from "@/components/Footer";
 import { MainNavbar } from "@/components/Navbar";
-import Link from "next/link";
-import Image from "next/image";
-import galery1 from "@/assets/galery-1.png";
-import gif1 from "@/assets/video/program1-gif.gif";
-import ReactPlayer from "react-player";
-import React, { useRef } from "react";
+
 import {
   CardProgram,
   CardProgramLeft,
@@ -20,6 +15,7 @@ export default function Page() {
   const program2 = parsedData.find((program) => program.id === 2);
 
   const program3 = parsedData.find((program) => program.id === 3);
+  const program4 = parsedData.find((program) => program.id === 4);
 
   console.log(program1);
   return (
@@ -36,6 +32,8 @@ export default function Page() {
           <CardProgramLeft {...program1} />
           <CardProgramRight {...program2} />
           <CardProgramLeft {...program3} />
+          <CardProgramRight {...program4} />
+
           <div className="h-96 w-0.5 rounded-full bg-gray-400  m-auto"></div>
           <h5 className="text-center text-sm md:text-base font-medium text-gray-400  my-10 w-full md:w-[500px]  m-auto">
             Exciting news! A new and improved program is on the horizon,

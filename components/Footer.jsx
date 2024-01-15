@@ -151,7 +151,7 @@ export default function Footer() {
         </div>
       </div>
       <div className=" bg-[#000000]">
-        <div className="max-w-[1520px]   m-auto  py-5 px-5 md:px-0">
+        <div className="max-w-[1520px]   m-auto  py-5 px-5 md:px-20">
           <p className="text-center md:text-end text-white text-xs md:text-sm font-light">
             © 2024 S-CUBE CENTER. All Rights Reserved.
           </p>
