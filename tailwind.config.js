@@ -1,4 +1,4 @@
-const { montserrat } = require('./app/fonts')
+
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
