@@ -1,5 +1,3 @@
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -8,12 +6,13 @@ module.exports = {
         './app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
-
-        extend: {
+        theme: {
             fontFamily: {
-                'primary': ['var(--font-montserrat'],
+                'primary': ['Montserrat'],
                 'display': ['Oswald'],
             },
+        },
+        extend: {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic':
