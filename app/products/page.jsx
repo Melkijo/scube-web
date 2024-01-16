@@ -30,7 +30,7 @@ export default function Page() {
       </div>
       <div
         id="banner"
-        className="w-full  bg-gradient-to-r from-red-500 to-orange-500 h-52 px-5 flex justify-center items-center md:px-20"
+        className="w-full pt-20 bg-gradient-to-r from-red-500 to-orange-500 h-52 px-5 flex justify-center items-center md:px-20"
       >
         <h1 className="text-[42px] text-white text">PRODUCT</h1>
       </div>

@@ -17,7 +17,6 @@ export default function Page() {
   const program3 = parsedData.find((program) => program.id === "3");
   const program4 = parsedData.find((program) => program.id === "4");
 
-  console.log(program1);
   return (
     <>
       <div className="fixed z-20 w-full ">
@@ -26,7 +25,7 @@ export default function Page() {
       <main>
         <div
           id="banner"
-          className="w-full  bg-gradient-to-r from-fuchsia-500 to-cyan-500 h-52 px-5 flex justify-center items-center lg:px-20"
+          className="w-full pt-20 bg-gradient-to-r from-fuchsia-500 to-cyan-500 h-52 px-5 flex justify-center items-center lg:px-20"
         >
           <h1 className="text-[42px] text-white ">PROGRAM</h1>
         </div>

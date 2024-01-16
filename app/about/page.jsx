@@ -63,7 +63,7 @@ export default function Page() {
       </div>
       <div
         id="banner"
-        className="w-full  bg-gradient-to-r from-green-200 via-green-400 to-green-500 h-52 px-5 flex justify-center items-center md:px-20"
+        className="w-full pt-20 bg-gradient-to-r from-green-200 via-green-400 to-green-500 h-52 px-5 flex justify-center items-center md:px-20"
       >
         <h1 className="text-[42px] text-white text">ABOUT</h1>
       </div>
@@ -113,75 +113,108 @@ export default function Page() {
               src={galery1}
               width={500}
               height={500}
-              className="w-full h-80 object-cover"
+              className="w-full  h-full lg:h-80 object-cover"
             />
           </div>
           <div className="h-full flex flex-col justify-center">
-            <h2 className="text-left  text-2xl md:text-[38px] font-bold mb-4">
+            <h2 className="text-center md:text-left  text-2xl md:text-[38px] font-bold mb-4">
               History
             </h2>
-            <p className="text-left text-base">
-              S-CUBE Center is committed to using innovation and collaboration
-              to positively influence communities. The center recognizes the
-              importance of long-term impact and responsible innovation and
-              therefore strives to develop sustainable social empowerment
-              programs in technology, education, business, and others.
+            <p className="text-justify md:text-left text-base">
+              Mataram University (UNRAM), in collaboration with Seoul National
+              University Social Responsibility (SNU SR) and Samick, is launching
+              the SCUBE Center. Inaugurated in 2022, the SCUBE Center is set to
+              offer a range of training programs including Korean language and
+              graphic design, providing valuable educational opportunities for
+              students and enthusiasts alike. Furthermore, SNU SR and Unram's
+              LPPM have decided to help community service activities in
+              economically promising area like villages with new startups or
+              potential small businesses. This marks the beginning of the Global
+              Real Work Experience or Kuliah Kerja Nyata (KKN) program
+              implementation.
             </p>
           </div>
         </div>
+      </div>
 
-        <div className="mt-20">
-          <h2 className="text-center  text-2xl md:text-[38px] font-bold mb-8">
-            Our Team
+      <div className="my-10 md:my-20 bg-red-100">
+        <div className="max-w-[1520px] m-auto py-10 px-5 lg:px-20">
+          <h2 className="text-2xl md:text-[38px] font-bold mb-7 text-center  ">
+            Our Vision and Goals
           </h2>
-          <div className="w-full lg:w-[50%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="flex flex-col items-center gap-3">
-              <ExportedImage
-                src={team1}
-                width={500}
-                height={500}
-                className="w-60 h-60 object-fill"
-              />
-              <div>
-                <h3 className="font-bold text-lg">Prof Jun-Seok Hwang</h3>
-                <p className="text-center text-base">Advisory</p>
-              </div>
+          <div className="grid grid-cols-2  gap-5 mb-5 ">
+            <div className=" text-center place-self-end h-full max-w-[400px] bg-red-400 py-3 px-4 rounded-lg text-white font-semibold">
+              <p>Realizing the effective social contribution</p>
             </div>
-            <div className="flex flex-col items-center gap-3">
-              <ExportedImage
-                src={team3}
-                width={500}
-                height={500}
-                className="w-60 h-60 object-fill"
-              />
-              <div>
-                <h3 className="font-bold text-lg">Budi Irmawati</h3>
-                <p className="text-center text-base">General Manager</p>
-              </div>
+            <div className="text-center max-w-[400px]  h-full bg-red-400 py-3 px-4 rounded-lg text-white font-semibold">
+              <p>Creating sustainable social development</p>
             </div>
-            <div className="flex flex-col items-center gap-3">
-              <ExportedImage
-                src={team4}
-                width={500}
-                height={500}
-                className="w-60 h-60 object-fill"
-              />
-              <div>
-                <h3 className="font-bold text-lg">Ida Bagus Ketut Widiartha</h3>
-                <p className="text-center text-base">Deputy Manager</p>
-              </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+            <div className="text-center place-self-end h-full max-w-[400px] bg-red-500 py-3 px-4 rounded-lg text-white font-semibold">
+              <p>Increase the capacity and economic level of the community</p>
             </div>
-            <div className="flex flex-col items-center gap-3">
-              <ExportedImage
-                src={team2}
-                width={500}
-                height={500}
-                className="w-60 h-60 object-fill"
-              />
-              <div>
-                <h3 className="font-bold text-lg">I Wayan Agus Arimbawa</h3>
-                <p className="text-center text-base">Program and Cooperation</p>
-              </div>
+            <div className="text-center place-self-center h-full max-w-[400px] bg-red-500 py-3 px-4 rounded-lg text-white font-semibold">
+              <p>Disseminate global knowledge and resources</p>
+            </div>
+            <div className="text-center  max-w-[400px] h-full bg-red-500 py-3 px-4 rounded-lg text-white font-semibold">
+              <p>As a model of sustainable social contribution</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-0 md:mt-20 max-w-[1520px] m-auto py-10 px-5 lg:px-20">
+        <h2 className="text-center  text-2xl md:text-[38px] font-bold mb-8">
+          Our Team
+        </h2>
+        <div className="w-full lg:w-[50%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="flex flex-col items-center gap-3">
+            <ExportedImage
+              src={team1}
+              width={500}
+              height={500}
+              className="w-60 h-60 object-fill"
+            />
+            <div>
+              <h3 className="font-bold text-lg">Prof Jun-Seok Hwang</h3>
+              <p className="text-center text-base">Advisory</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <ExportedImage
+              src={team3}
+              width={500}
+              height={500}
+              className="w-60 h-60 object-fill"
+            />
+            <div>
+              <h3 className="font-bold text-lg">Budi Irmawati</h3>
+              <p className="text-center text-base">General Manager</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <ExportedImage
+              src={team4}
+              width={500}
+              height={500}
+              className="w-60 h-60 object-fill"
+            />
+            <div>
+              <h3 className="font-bold text-lg">Ida Bagus Ketut Widiartha</h3>
+              <p className="text-center text-base">Deputy Manager</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <ExportedImage
+              src={team2}
+              width={500}
+              height={500}
+              className="w-60 h-60 object-fill"
+            />
+            <div>
+              <h3 className="font-bold text-lg">I Wayan Agus Arimbawa</h3>
+              <p className="text-center text-base">Program and Cooperation</p>
             </div>
           </div>
         </div>
@@ -220,7 +253,7 @@ export default function Page() {
               <div className="flex md:flex-col gap-5 flex-row  justify-between">
                 <div>
                   <h3 className="font-bold text-xl">Number</h3>
-                  <p>081775262222</p>
+                  <p>+6281775262221</p>
                 </div>
                 <div>
                   <h3 className="font-bold text-xl">Email</h3>

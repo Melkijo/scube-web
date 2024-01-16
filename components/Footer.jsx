@@ -173,7 +173,14 @@ export default function Footer() {
         </div>
       </div>
       <div className=" bg-[#000000] font-primary">
-        <div className="max-w-[1520px]   m-auto  py-5 px-5 md:px-20">
+        <div className="max-w-[1520px] mx-auto flex gap-5 flex-col-reverse md:flex-row md:justify-between  items-center   py-5 px-5 lg:px-20">
+          <Link
+            href="https://mejodev.vercel.app/"
+            className="underline text-gray-800 hover:text-green-400"
+            target="_blank"
+          >
+            behind the scene?
+          </Link>
           <p className="text-center md:text-end text-white text-xs md:text-sm font-light">
             © 2024 S-CUBE CENTER. All Rights Reserved.
           </p>

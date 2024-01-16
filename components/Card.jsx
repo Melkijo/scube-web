@@ -16,7 +16,7 @@ const CardAbout = (props) => {
         className={` flex justify-center items-center h-40`}
         style={{ backgroundColor: `#${props.color}` }}
       >
-        <props.image width="100" height="100" />
+        <props.image width={100} height={100} />
       </div>
       <div className="pt-3 pb-5 px-3  text-center">
         <h2 className="text-lg md:text-2xl font-semibold pb-2">
@@ -117,9 +117,9 @@ const CardProgramLeft = (props) => {
         <ExportedImage
           src={props.thumbnail}
           alt="logo"
-          width="500"
+          width={500}
           placeholder="empty"
-          height="500"
+          height={500}
           className="w-full h-52 md:h-80 object-cover "
         />
 
@@ -128,16 +128,16 @@ const CardProgramLeft = (props) => {
             src={props.arrayImage[0]}
             placeholder="empty"
             alt="logo"
-            width="500"
-            height="500"
+            width={500}
+            height={500}
             className="w-[50%] h-48 object-cover "
           />
           <ExportedImage
             src={props.arrayImage[1]}
             alt="logo"
             placeholder="empty"
-            width="500"
-            height="500"
+            width={500}
+            height={500}
             className="w-[50%] h-48 object-cover "
           />
         </div>
@@ -168,8 +168,8 @@ const CardProgramRight = (props) => {
           src={props.thumbnail}
           placeholder="empty"
           alt="logo"
-          width="500"
-          height="500"
+          width={500}
+          height={500}
           className="w-full h-52 md:h-80 object-cover "
         />
         <div className="flex gap-1">
@@ -177,16 +177,16 @@ const CardProgramRight = (props) => {
             src={props.arrayImage[0]}
             placeholder="empty"
             alt="logo"
-            width="500"
-            height="500"
+            width={500}
+            height={500}
             className="w-[50%] h-48 object-cover "
           />
           <ExportedImage
             src={props.arrayImage[1]}
             placeholder="empty"
             alt="logo"
-            width="500"
-            height="500"
+            width={500}
+            height={500}
             className="w-[50%] h-48 object-cover "
           />
         </div>

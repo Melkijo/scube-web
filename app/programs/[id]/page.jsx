@@ -55,7 +55,7 @@ export default function Page({ params }) {
       <div className="fixed z-20 w-full ">
         <MainNavbar />
       </div>
-      <div className="max-w-[1520px] m-auto px-5 lg:px-64 pt-8 pb-14 font-primary">
+      <div className="max-w-[1520px]  m-auto px-5 lg:px-64 pt-20 pb-14 font-primary">
         <h1 className="text-[28px] md:text-[56px]">{selectedProgram.title}</h1>
         <ExportedImage
           placeholder="empty"

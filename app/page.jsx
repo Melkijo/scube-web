@@ -321,9 +321,9 @@ export default function Home() {
                   placeholder="empty"
                   src={galery1}
                   alt="hero"
-                  width={1000}
+                  width={500}
                   height={500}
-                  className="w-full h-full object-cover"
+                  className="w-[1000px] h-full object-cover"
                 />
               </div>
               <div>
@@ -331,7 +331,7 @@ export default function Home() {
                   placeholder="empty"
                   src={galery2}
                   alt="hero"
-                  width={600}
+                  width={500}
                   height={500}
                 />
               </div>
@@ -382,7 +382,7 @@ export default function Home() {
                   alt="hero"
                   width={1000}
                   height={500}
-                  className="w-full h-full object-cover"
+                  className="w-[1000px] h-full object-cover"
                 />
               </div>
             </div>
@@ -441,7 +441,7 @@ export default function Home() {
                 <div className="flex md:flex-col gap-5 flex-row  justify-between">
                   <div>
                     <h3 className="font-bold text-xl">Number</h3>
-                    <p>081775262222</p>
+                    <p>+6281775262221</p>
                   </div>
                   <div>
                     <h3 className="font-bold text-xl">Email</h3>

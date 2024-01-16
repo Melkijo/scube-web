@@ -62,7 +62,7 @@ export default function Product(props) {
       <div className="fixed z-20 w-full ">
         <MainNavbar />
       </div>
-      <div className="max-w-[1520px] m-auto px-5 lg:px-20 pt-8 pb-14 font-primary">
+      <div className="max-w-[1520px]  m-auto px-5 lg:px-20 pt-32 pb-14 font-primary">
         <div className="flex flex-col md:flex-row gap-5">
           <div className="w-full md:w-[1400px] bg-yellow-100">
             <ExportedImage
