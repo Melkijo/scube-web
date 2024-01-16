@@ -18,7 +18,9 @@ import team4 from "@/assets/team-4.png";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
+
 const VideoPlayer = dynamic(() => import("@/components/VideoPlayer"), {
   ssr: false,
 });
@@ -56,7 +58,9 @@ const aboutItems = [
 export default function Page() {
   return (
     <>
-      <MainNavbar />
+      <div className="fixed z-20 w-full ">
+        <MainNavbar />
+      </div>
       <div
         id="banner"
         className="w-full  bg-gradient-to-r from-green-200 via-green-400 to-green-500 h-52 px-5 flex justify-center items-center md:px-20"
@@ -64,7 +68,10 @@ export default function Page() {
         <h1 className="text-[42px] text-white text">ABOUT</h1>
       </div>
 
-      <div id="about" className="max-w-[1520px] m-auto px-5 lg:px-20 pb-10">
+      <div
+        id="about"
+        className="max-w-[1520px] m-auto px-5 lg:px-20 pb-10 font-primary"
+      >
         <div className=" rounded-lg m-auto relative z-10 pt-20 bg-white">
           <VideoPlayer />
           <small>inauguration of the scube center and cultural stage</small>
@@ -102,7 +109,7 @@ export default function Page() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-8">
           <div className="w-full">
-            <Image
+            <ExportedImage
               src={galery1}
               width={500}
               height={500}
@@ -129,7 +136,7 @@ export default function Page() {
           </h2>
           <div className="w-full lg:w-[50%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="flex flex-col items-center gap-3">
-              <Image
+              <ExportedImage
                 src={team1}
                 width={500}
                 height={500}
@@ -141,7 +148,7 @@ export default function Page() {
               </div>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <Image
+              <ExportedImage
                 src={team3}
                 width={500}
                 height={500}
@@ -153,7 +160,7 @@ export default function Page() {
               </div>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <Image
+              <ExportedImage
                 src={team4}
                 width={500}
                 height={500}
@@ -165,7 +172,7 @@ export default function Page() {
               </div>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <Image
+              <ExportedImage
                 src={team2}
                 width={500}
                 height={500}
@@ -179,7 +186,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#F8FFEC]">
+      <div className="w-full bg-[#F8FFEC] font-primary">
         <div
           id="contact"
           className="max-w-[1520px] m-auto px-5 lg:px-20 pt-5 pb-10"
@@ -193,7 +200,7 @@ export default function Page() {
               className="w-full lg:w-[700px] overflow-hidden"
               target="_blank"
             >
-              <Image
+              <ExportedImage
                 src={map}
                 alt="hero"
                 width={700}

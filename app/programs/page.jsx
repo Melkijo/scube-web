@@ -11,16 +11,18 @@ import jsonData from "@/data/program.js";
 export default function Page() {
   //get program data 1 from jsonData
   const parsedData = JSON.parse(jsonData);
-  const program1 = parsedData.find((program) => program.id === 1);
-  const program2 = parsedData.find((program) => program.id === 2);
+  const program1 = parsedData.find((program) => program.id === "1");
+  const program2 = parsedData.find((program) => program.id === "2");
 
-  const program3 = parsedData.find((program) => program.id === 3);
-  const program4 = parsedData.find((program) => program.id === 4);
+  const program3 = parsedData.find((program) => program.id === "3");
+  const program4 = parsedData.find((program) => program.id === "4");
 
   console.log(program1);
   return (
-    <div>
-      <MainNavbar />
+    <>
+      <div className="fixed z-20 w-full ">
+        <MainNavbar />
+      </div>
       <main>
         <div
           id="banner"
@@ -42,6 +44,6 @@ export default function Page() {
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         theme: {
             fontFamily: {
-                'sans': ['ui-sans-serif', 'system-ui'],
+                'primary': ['Montserrat'],
                 'display': ['Oswald'],
             },
         },

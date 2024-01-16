@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
+
 import instagram from "@/assets/icons/arcticons_instagram.png";
 import linkedin from "@/assets/icons/arcticons_linkedin.png";
 import tiktok from "@/assets/icons/arcticons_tiktok.png";
@@ -9,7 +11,7 @@ import { usePathname } from "next/navigation";
 const MainNavbar = () => {
   const pathname = usePathname();
   return (
-    <div className="navbar  bg-base-100 max-w-[1520px] m-auto px-5 lg:px-20">
+    <div className="navbar  bg-base-100 max-w-[1520px] m-auto px-5 lg:px-20 font-primary">
       <div className=" justify-between w-full lg:justify-start lg:w-[50%]">
         <Link href="/" className="text-xl font-bold">
           S-CUBE CENTER
@@ -55,7 +57,8 @@ const MainNavbar = () => {
                   className="bg-white p-2 hover:bg-red-400"
                   target="_blank"
                 >
-                  <Image
+                  <ExportedImage
+                    placeholder="empty"
                     src={instagram}
                     alt="instagram"
                     className="w-6 h-6 object-cover"
@@ -66,14 +69,23 @@ const MainNavbar = () => {
                   className="bg-white p-2 hover:bg-blue-400"
                   target="_blank"
                 >
-                  <Image src={linkedin} alt="instagram" className="w-6 h-6" />
+                  <ExportedImage
+                    src={linkedin}
+                    alt="instagram"
+                    className="w-6 h-6"
+                  />
                 </Link>
                 <Link
                   href="https://www.tiktok.com/@kkn.unramxsnu"
                   className="bg-white p-2 hover:bg-yellow-400"
                   target="_blank"
                 >
-                  <Image src={tiktok} alt="instagram" className="w-6 h-6" />
+                  <ExportedImage
+                    placeholder="empty"
+                    src={tiktok}
+                    alt="instagram"
+                    className="w-6 h-6"
+                  />
                 </Link>
               </div>
             </li>
@@ -131,21 +143,36 @@ const MainNavbar = () => {
             className="bg-white p-2 hover:bg-red-400"
             target="_blank"
           >
-            <Image src={instagram} alt="instagram" className="w-6 h-6" />
+            <ExportedImage
+              placeholder="empty"
+              src={instagram}
+              alt="instagram"
+              className="w-6 h-6"
+            />
           </Link>
           <Link
             href="https://www.linkedin.com/company/unram-scube-center/"
             className="bg-white p-2 hover:bg-blue-400"
             target="_blank"
           >
-            <Image src={linkedin} alt="instagram" className="w-6 h-6" />
+            <ExportedImage
+              placeholder="empty"
+              src={linkedin}
+              alt="instagram"
+              className="w-6 h-6"
+            />
           </Link>
           <Link
             href="https://www.tiktok.com/@kkn.unramxsnu"
             className="bg-white p-2 hover:bg-yellow-400"
             target="_blank"
           >
-            <Image src={tiktok} alt="instagram" className="w-6 h-6" />
+            <ExportedImage
+              placeholder="empty"
+              src={tiktok}
+              alt="instagram"
+              className="w-6 h-6"
+            />
           </Link>
         </div>
       </div>

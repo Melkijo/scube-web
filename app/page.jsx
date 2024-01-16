@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
+
 import hero1 from "@/assets/hero-1.png";
 import hero2 from "@/assets/hero-2.png";
 // import VideoPlayer from '@/components/VideoPlayer'
@@ -89,20 +91,22 @@ export default function Home() {
         <MainNavbar />
       </div>
 
-      <main>
+      <main className="font-primary">
         <div
           id="hero"
           className=" max-w-[1520px] m-auto  overflow-hidden pt-16"
         >
           <div className="h-[500px] md:h-[620px] relative">
-            <Image
+            <ExportedImage
+              placeholder="empty"
               src={hero1}
               alt="hero"
               width={500}
               height={500}
               className="absolute animate-slow-left  w-[250px] md:w-[500px] h-[250px] md:h-[500px]  object-cover"
             />
-            <Image
+            <ExportedImage
+              placeholder="empty"
               src={hero2}
               alt="hero"
               width={500}
@@ -132,7 +136,8 @@ export default function Home() {
 
             <div className="relative">
               <Link href="#about">
-                <Image
+                <ExportedImage
+                  placeholder="empty"
                   src={heroArrow}
                   alt="hero"
                   width={100}
@@ -140,7 +145,8 @@ export default function Home() {
                   className="animate-bounce absolute z-10 top-12 md:top-16 left-0 right-0 mx-auto w-[30px] md:w-[50px] h-[30px] md:h-[50px]  object-cover"
                 />
               </Link>
-              <Image
+              <ExportedImage
+                placeholder="empty"
                 src={hero3}
                 alt="hero"
                 width={500}
@@ -208,8 +214,8 @@ export default function Home() {
             showStatus={false}
             infiniteLoop={true}
             autoPlay={true}
-            interval={3000}
-            stopOnHover={false}
+            interval={4000}
+            stopOnHover={true}
             className="w-full"
           >
             <div>
@@ -218,7 +224,8 @@ export default function Home() {
                 Scube Center, and I must say, it exceeded all my expectations."
               </h2>
               <div className="flex gap-3 justify-center items-center mt-5">
-                <Image
+                <ExportedImage
+                  placeholder="empty"
                   src={testimoni1}
                   width={200}
                   height={200}
@@ -240,7 +247,8 @@ export default function Home() {
                 collaboration, and cutting-edge technology"
               </h2>
               <div className="flex gap-3 justify-center items-center mt-5">
-                <Image
+                <ExportedImage
+                  placeholder="empty"
                   src={testimoni2}
                   width={200}
                   height={200}
@@ -309,7 +317,8 @@ export default function Home() {
           <div className="flex flex-col gap-2 md:gap-5">
             <div className="flex gap-2 md:gap-5">
               <div>
-                <Image
+                <ExportedImage
+                  placeholder="empty"
                   src={galery1}
                   alt="hero"
                   width={1000}
@@ -318,26 +327,57 @@ export default function Home() {
                 />
               </div>
               <div>
-                <Image src={galery2} alt="hero" width={600} height={500} />
+                <ExportedImage
+                  placeholder="empty"
+                  src={galery2}
+                  alt="hero"
+                  width={600}
+                  height={500}
+                />
               </div>
             </div>
             <div className="flex  gap-2 md:gap-5">
               <div>
-                <Image src={galery3} alt="hero" width={500} height={500} />
+                <ExportedImage
+                  placeholder="empty"
+                  src={galery3}
+                  alt="hero"
+                  width={500}
+                  height={500}
+                />
               </div>
               <div>
-                <Image src={galery4} alt="hero" width={500} height={500} />
+                <ExportedImage
+                  placeholder="empty"
+                  src={galery4}
+                  alt="hero"
+                  width={500}
+                  height={500}
+                />
               </div>
               <div>
-                <Image src={galery5} alt="hero" width={500} height={500} />
+                <ExportedImage
+                  placeholder="empty"
+                  src={galery5}
+                  alt="hero"
+                  width={500}
+                  height={500}
+                />
               </div>
             </div>
             <div className="flex  gap-2 md:gap-5">
               <div>
-                <Image src={galery6} alt="hero" width={600} height={500} />
+                <ExportedImage
+                  placeholder="empty"
+                  src={galery6}
+                  alt="hero"
+                  width={600}
+                  height={500}
+                />
               </div>
               <div>
-                <Image
+                <ExportedImage
+                  placeholder="empty"
                   src={galery7}
                   alt="hero"
                   width={1000}
@@ -380,7 +420,8 @@ export default function Home() {
                 className="w-full lg:w-[700px] overflow-hidden"
                 target="_blank"
               >
-                <Image
+                <ExportedImage
+                  placeholder="empty"
                   src={map}
                   alt="hero"
                   width={700}

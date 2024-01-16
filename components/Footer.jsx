@@ -2,18 +2,25 @@ import Link from "next/link";
 import instagram from "@/assets/icons/arcticons_instagram.png";
 import linkedin from "@/assets/icons/arcticons_linkedin.png";
 import tiktok from "@/assets/icons/arcticons_tiktok.png";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
+
 import logo from "@/assets/logo.png";
 export default function Footer() {
   return (
     <>
       <div
         id="footer"
-        className=" bg-[#0F1035] pt-10 pb-5 px-5 lg:px-20 text-white"
+        className=" bg-[#0F1035] pt-10 pb-5 px-5 lg:px-20 text-white font-primary"
       >
         <div className="max-w-[1520px]   m-auto flex md:flex-row flex-col  gap-10 md:justify-between">
           <div className="flex flex-row md:flex-col gap-5 md:items-start items-center">
-            <Image src={logo} alt="logo" className="w-24 h-24" />
+            <ExportedImage
+              src={logo}
+              alt="logo"
+              placeholder="empty"
+              className="w-24 h-24"
+            />
             <div>
               <h2 className="text-white font-bold text-2xl ">S-CUBE CENTER</h2>
               <p className="text-white">SNU Samick Sustainability</p>
@@ -84,7 +91,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/prgrams"
+                    href="/programs"
                     className=" hover:underline hover:underline-offset-4"
                   >
                     - Program
@@ -130,27 +137,42 @@ export default function Footer() {
                 className="bg-white p-2 hover:bg-red-400"
                 target="_blank"
               >
-                <Image src={instagram} alt="instagram" className="w-6 h-6" />
+                <ExportedImage
+                  placeholder="empty"
+                  src={instagram}
+                  alt="instagram"
+                  className="w-6 h-6"
+                />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/unram-scube-center/"
                 className="bg-white p-2 hover:bg-blue-400"
                 target="_blank"
               >
-                <Image src={linkedin} alt="instagram" className="w-6 h-6" />
+                <ExportedImage
+                  placeholder="empty"
+                  src={linkedin}
+                  alt="instagram"
+                  className="w-6 h-6"
+                />
               </Link>
               <Link
                 href="https://www.tiktok.com/@kkn.unramxsnu"
                 className="bg-white p-2 hover:bg-yellow-400"
                 target="_blank"
               >
-                <Image src={tiktok} alt="instagram" className="w-6 h-6" />
+                <ExportedImage
+                  placeholder="empty"
+                  src={tiktok}
+                  alt="instagram"
+                  className="w-6 h-6"
+                />
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className=" bg-[#000000]">
+      <div className=" bg-[#000000] font-primary">
         <div className="max-w-[1520px]   m-auto  py-5 px-5 md:px-20">
           <p className="text-center md:text-end text-white text-xs md:text-sm font-light">
             © 2024 S-CUBE CENTER. All Rights Reserved.

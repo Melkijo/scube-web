@@ -25,7 +25,9 @@ export default function Page() {
   };
   return (
     <>
-      <MainNavbar />
+      <div className="fixed z-20 w-full ">
+        <MainNavbar />
+      </div>
       <div
         id="banner"
         className="w-full  bg-gradient-to-r from-red-500 to-orange-500 h-52 px-5 flex justify-center items-center md:px-20"

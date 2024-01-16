@@ -1,5 +1,6 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import parse from "html-react-parser";
 const CardAbout = (props) => {
@@ -33,9 +34,10 @@ const CardProduct = (props) => {
       className=" border border-black bg-white rounded-md overflow-hidden"
       key={props.id}
     >
-      <Image
+      <ExportedImage
         src={props.image}
         alt="hero"
+        placeholder="empty"
         width={500}
         height={500}
         className="h-36 md:h-56 object-cover"
@@ -65,9 +67,10 @@ const CardActivity = (props) => {
       className="flex-none border border-black bg-white w-64 md:w-72"
       key={props.id}
     >
-      <Image
+      <ExportedImage
         src={props.image}
         alt="hero"
+        placeholder="empty"
         width={500}
         height={500}
         className="h-56 object-cover"
@@ -89,10 +92,11 @@ const CardProgram = (props) => {
       className={`border border-[#1a1a1a] hover:border-none rounded-lg   bg-white text-black hover:text-white hover:bg-[#00A9FF] w-full  overflow-hidden`}
       key={props.id}
     >
-      <Image
+      <ExportedImage
         src={props.thumbnail}
         alt="hero"
         width={500}
+        placeholder="empty"
         height={300}
         className="w-full h-36 md:h-48  object-cover"
       />
@@ -110,25 +114,28 @@ const CardProgramLeft = (props) => {
   return (
     <div className=" grid grid-cols-1 md:grid-cols-2 my-10 items-center gap-3 md:gap-8 bg-white hover:bg-[#eace4d] hover:text-white">
       <div className="flex w-full flex-col gap-1  bg-white overflow-hidden">
-        <Image
+        <ExportedImage
           src={props.thumbnail}
           alt="logo"
           width="500"
+          placeholder="empty"
           height="500"
           className="w-full h-52 md:h-80 object-cover "
         />
 
         <div className="flex gap-1">
-          <Image
+          <ExportedImage
             src={props.arrayImage[0]}
+            placeholder="empty"
             alt="logo"
             width="500"
             height="500"
             className="w-[50%] h-48 object-cover "
           />
-          <Image
+          <ExportedImage
             src={props.arrayImage[1]}
             alt="logo"
+            placeholder="empty"
             width="500"
             height="500"
             className="w-[50%] h-48 object-cover "
@@ -157,23 +164,26 @@ const CardProgramRight = (props) => {
         </Link>
       </div>
       <div className="w-full flex flex-col gap-1 bg-white overflow-hidden">
-        <Image
+        <ExportedImage
           src={props.thumbnail}
+          placeholder="empty"
           alt="logo"
           width="500"
           height="500"
           className="w-full h-52 md:h-80 object-cover "
         />
         <div className="flex gap-1">
-          <Image
+          <ExportedImage
             src={props.arrayImage[0]}
+            placeholder="empty"
             alt="logo"
             width="500"
             height="500"
             className="w-[50%] h-48 object-cover "
           />
-          <Image
+          <ExportedImage
             src={props.arrayImage[1]}
+            placeholder="empty"
             alt="logo"
             width="500"
             height="500"
