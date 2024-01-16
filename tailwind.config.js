@@ -1,3 +1,5 @@
+const { montserrat } = require('./app/fonts')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -6,13 +8,12 @@ module.exports = {
         './app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
-        theme: {
+
+        extend: {
             fontFamily: {
-                'primary': ['Montserrat'],
+                'primary': ['var(--font-montserrat'],
                 'display': ['Oswald'],
             },
-        },
-        extend: {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic':
