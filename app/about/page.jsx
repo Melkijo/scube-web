@@ -87,7 +87,7 @@ export default function Page() {
             business, and others.
           </p>
         </div>
-        <div className=" hidden lg:grid grid-cols-3 items-center justify-center gap-[50px] ">
+        <div className=" hidden lg:grid grid-cols-3 items-center justify-center gap-[50px] px-0 md:px-32">
           <div>
             <CardAbout {...aboutItems[0]} />
           </div>

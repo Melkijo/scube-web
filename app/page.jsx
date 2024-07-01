@@ -160,7 +160,7 @@ export default function Home() {
             <h2 className="text-center  text-2xl md:text-[38px] font-bold mb-4">
               What is S-Cube Center?
             </h2>
-            <p className="text-base text-center w-[700px]">
+            <p className="text-base text-center w-full lg:w-[700px]">
               S-CUBE Center means 3S, which are SNU, Samick, and Sustainability.
               S-Cube is an innovation center that focuses on developing
               sustainable social empowerment programs in technology, education,

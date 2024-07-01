@@ -156,17 +156,19 @@ export default function Footer() {
         </div>
       </div>
       <div className=" bg-[#000000] font-primary ">
-        <div className="max-w-[1520px] mx-auto flex flex-col-reverse items-center gap-5  py-5 md:flex-row md:justify-between ">
-          <Link
-            href="https://mejodev.vercel.app/"
-            className="text-gray-800 underline hover:text-green-400"
-            target="_blank"
-          >
-            behind the scene?
-          </Link>
-          <p className="text-xs font-light text-center text-white md:text-end md:text-sm">
-            © 2024 S-CUBE CENTER. All Rights Reserved.
-          </p>
+        <div className="max-w-[1520px] mx-auto ">
+          <div className="flex flex-col-reverse items-center gap-5 px-5 py-5 md:flex-row md:justify-between md:px-20">
+            <Link
+              href="https://mejodev.vercel.app/"
+              className="text-gray-800 underline hover:text-green-400"
+              target="_blank"
+            >
+              behind the scene?
+            </Link>
+            <p className="text-xs font-light text-center text-white md:text-end md:text-sm">
+              © 2024 S-CUBE CENTER. All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </>

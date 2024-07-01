@@ -31,7 +31,7 @@ const nextConfig = {
         nextImageExportOptimizer_remoteImageCacheTTL: "0",
     },
 
-    // output: "export"
+    output: "export"
 
 }
 
