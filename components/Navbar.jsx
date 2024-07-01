@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 const MainNavbar = () => {
   const pathname = usePathname();
   return (
-    <div className="navbar  bg-base-100 px-5 lg:px-20 font-primary">
+    <div className="px-5 navbar bg-base-100 lg:px-20 font-primary">
       <div className="navbar max-w-[1520px] mx-auto">
         <div className=" justify-between w-full lg:justify-start lg:w-[50%]">
           <Link href="/" className="text-xl font-bold">
@@ -21,7 +21,7 @@ const MainNavbar = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="w-5 h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -45,29 +45,26 @@ const MainNavbar = () => {
                 <Link href="/programs">Program</Link>
               </li>
               <li>
-                <Link href="/products">Product</Link>
-              </li>
-              <li>
                 <Link href="/about">About</Link>
               </li>
               <li>
-                <h5 className="font-bold pt-3">Follow Us</h5>
+                <h5 className="pt-3 font-bold">Follow Us</h5>
                 <div className="flex gap-5">
                   <Link
                     href="https://www.instagram.com/scubecenter/"
-                    className="bg-white p-2 hover:bg-red-400"
+                    className="p-2 bg-white hover:bg-red-400"
                     target="_blank"
                   >
                     <ExportedImage
                       placeholder="empty"
                       src={instagram}
                       alt="instagram"
-                      className="w-6 h-6 object-cover"
+                      className="object-cover w-6 h-6"
                     />
                   </Link>
                   <Link
                     href="https://www.linkedin.com/company/unram-scube-center/"
-                    className="bg-white p-2 hover:bg-blue-400"
+                    className="p-2 bg-white hover:bg-blue-400"
                     target="_blank"
                   >
                     <ExportedImage
@@ -78,7 +75,7 @@ const MainNavbar = () => {
                   </Link>
                   <Link
                     href="https://www.tiktok.com/@kkn.unramxsnu"
-                    className="bg-white p-2 hover:bg-yellow-400"
+                    className="p-2 bg-white hover:bg-yellow-400"
                     target="_blank"
                   >
                     <ExportedImage
@@ -93,8 +90,8 @@ const MainNavbar = () => {
             </ul>
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className=" flex gap-5 px-1  ">
+        <div className="hidden navbar-center lg:flex">
+          <ul className="flex gap-5 px-1 ">
             <li>
               <Link
                 href="/"
@@ -117,16 +114,6 @@ const MainNavbar = () => {
             </li>
             <li>
               <Link
-                href="/products"
-                className={`text-base hover:underline ${
-                  pathname === "/products" ? "underline" : "no-underline"
-                }`}
-              >
-                Product
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/about"
                 className={`text-base hover:underline ${
                   pathname === "/about" ? "underline" : "no-underline"
@@ -137,11 +124,11 @@ const MainNavbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="hidden navbar-end lg:flex">
           <div className="flex gap-5">
             <Link
               href="https://www.instagram.com/scubecenter/"
-              className="bg-white p-2 hover:bg-red-400"
+              className="p-2 bg-white hover:bg-red-400"
               target="_blank"
             >
               <ExportedImage
@@ -153,7 +140,7 @@ const MainNavbar = () => {
             </Link>
             <Link
               href="https://www.linkedin.com/company/unram-scube-center/"
-              className="bg-white p-2 hover:bg-blue-400"
+              className="p-2 bg-white hover:bg-blue-400"
               target="_blank"
             >
               <ExportedImage
@@ -165,7 +152,7 @@ const MainNavbar = () => {
             </Link>
             <Link
               href="https://www.tiktok.com/@kkn.unramxsnu"
-              className="bg-white p-2 hover:bg-yellow-400"
+              className="p-2 bg-white hover:bg-yellow-400"
               target="_blank"
             >
               <ExportedImage

@@ -17,6 +17,27 @@ const Arrow = () => {
   );
 };
 
+const ArrowDownHero = () => {
+  return (
+    <svg
+      width="80"
+      height="80"
+      viewBox="0 0 154 154"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M77 129.36C48.048 129.36 24.64 105.952 24.64 76.9999C24.64 48.0479 48.048 24.6399 77 24.6399C105.952 24.6399 129.36 48.0479 129.36 76.9999C129.36 105.952 105.952 129.36 77 129.36ZM77 30.7999C51.436 30.7999 30.8 51.4359 30.8 76.9999C30.8 102.564 51.436 123.2 77 123.2C102.564 123.2 123.2 102.564 123.2 76.9999C123.2 51.4359 102.564 30.7999 77 30.7999Z"
+        fill="#1F2937"
+      />
+      <path
+        d="M77 105.952L47.124 76.0759L51.436 71.7639L77 97.3279L102.564 71.7639L106.876 76.0759L77 105.952Z"
+        fill="#1F2937"
+      />
+      <path d="M73.92 49.28H80.08V101.64H73.92V49.28Z" fill="#1F2937" />
+    </svg>
+  );
+};
 const ArrowLeft = () => {
   return (
     <svg
@@ -27,8 +48,8 @@ const ArrowLeft = () => {
       fill="none"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M2.96045 27.9999L19.2116 11.745L21.8548 14.3845L10.106 26.1333L52.2666 26.1333V29.8666L10.106 29.8666L21.8548 41.6117L19.2116 44.2549L2.96045 27.9999Z"
         fill="black"
       />
@@ -154,6 +175,7 @@ export {
   ArrowLeft,
   ArrowRight,
   ArrowDown,
+  ArrowDownHero,
   innovation,
   collaboration,
   sustainability,

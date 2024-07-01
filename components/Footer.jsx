@@ -2,7 +2,6 @@ import Link from "next/link";
 import instagram from "@/assets/icons/arcticons_instagram.png";
 import linkedin from "@/assets/icons/arcticons_linkedin.png";
 import tiktok from "@/assets/icons/arcticons_tiktok.png";
-// import Image from "next/image";
 import ExportedImage from "next-image-export-optimizer";
 
 import logo from "@/assets/logo.png";
@@ -14,7 +13,7 @@ export default function Footer() {
         className=" bg-[#0F1035] pt-10 pb-5 px-5 lg:px-20 text-white font-primary"
       >
         <div className="max-w-[1520px]   m-auto flex md:flex-row flex-col  gap-10 md:justify-between">
-          <div className="flex flex-row md:flex-col gap-5 md:items-start items-center">
+          <div className="flex flex-row items-center gap-5 md:flex-col md:items-start">
             <ExportedImage
               src={logo}
               alt="logo"
@@ -22,13 +21,13 @@ export default function Footer() {
               className="w-24 h-24"
             />
             <div>
-              <h2 className="text-white font-bold text-2xl ">S-CUBE CENTER</h2>
+              <h2 className="text-2xl font-bold text-white ">S-CUBE CENTER</h2>
               <p className="text-white">SNU Samick Sustainability</p>
             </div>
           </div>
 
-          <div className=" hidden md:block ">
-            <h5 className="font-bold text-lg  mb-3">Navigation</h5>
+          <div className="hidden md:block">
+            <h5 className="mb-3 text-lg font-bold">Navigation</h5>
             <ul className="flex flex-col gap-3">
               <li>
                 <Link
@@ -46,14 +45,6 @@ export default function Footer() {
                   - Program
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/products"
-                  className=" hover:underline hover:underline-offset-4"
-                >
-                  - Product
-                </Link>
-              </li>
 
               <li>
                 <Link
@@ -66,8 +57,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className=" hidden md:block ">
-            <h5 className="font-bold text-lg  mb-3">Contact</h5>
+          <div className="hidden md:block">
+            <h5 className="mb-3 text-lg font-bold">Contact</h5>
             <div className="flex flex-col gap-3">
               <p className="w-72">
                 Building A Level 3 Faculty of Engineering, University of Mataram
@@ -78,8 +69,8 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-10 md:hidden">
-            <div className=" ">
-              <h5 className="font-bold text-lg  mb-3">Navigation</h5>
+            <div className="">
+              <h5 className="mb-3 text-lg font-bold">Navigation</h5>
               <ul className="flex flex-col gap-3">
                 <li>
                   <Link
@@ -97,14 +88,6 @@ export default function Footer() {
                     - Program
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/products"
-                    className=" hover:underline hover:underline-offset-4"
-                  >
-                    - Product
-                  </Link>
-                </li>
 
                 <li>
                   <Link
@@ -118,7 +101,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h5 className="font-bold text-lg  mb-3">Contact</h5>
+              <h5 className="mb-3 text-lg font-bold">Contact</h5>
               <div className="flex flex-col gap-3">
                 <p>
                   Building A Level 3 Faculty of Engineering, University of
@@ -130,11 +113,11 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h5 className="font-bold text-lg  mb-3">Follow Us</h5>
+            <h5 className="mb-3 text-lg font-bold">Follow Us</h5>
             <div className="flex gap-5">
               <Link
                 href="https://www.instagram.com/scubecenter/"
-                className="bg-white p-2 hover:bg-red-400"
+                className="p-2 bg-white hover:bg-red-400"
                 target="_blank"
               >
                 <ExportedImage
@@ -146,7 +129,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://www.linkedin.com/company/unram-scube-center/"
-                className="bg-white p-2 hover:bg-blue-400"
+                className="p-2 bg-white hover:bg-blue-400"
                 target="_blank"
               >
                 <ExportedImage
@@ -158,7 +141,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://www.tiktok.com/@kkn.unramxsnu"
-                className="bg-white p-2 hover:bg-yellow-400"
+                className="p-2 bg-white hover:bg-yellow-400"
                 target="_blank"
               >
                 <ExportedImage
@@ -172,16 +155,16 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className=" bg-[#000000] font-primary">
-        <div className="max-w-[1520px] mx-auto flex gap-5 flex-col-reverse md:flex-row md:justify-between  items-center   py-5 px-5 lg:px-20">
+      <div className=" bg-[#000000] font-primary ">
+        <div className="max-w-[1520px] mx-auto flex flex-col-reverse items-center gap-5  py-5 md:flex-row md:justify-between ">
           <Link
             href="https://mejodev.vercel.app/"
-            className="underline text-gray-800 hover:text-green-400"
+            className="text-gray-800 underline hover:text-green-400"
             target="_blank"
           >
             behind the scene?
           </Link>
-          <p className="text-center md:text-end text-white text-xs md:text-sm font-light">
+          <p className="text-xs font-light text-center text-white md:text-end md:text-sm">
             © 2024 S-CUBE CENTER. All Rights Reserved.
           </p>
         </div>

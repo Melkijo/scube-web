@@ -10,7 +10,7 @@ import {
   socialEmpowerment,
 } from "@/components/Icons";
 import map from "@/assets/map.png";
-
+import bagan from "@/assets/bagan.png";
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.png";
 import team3 from "@/assets/team-3.png";
@@ -63,7 +63,7 @@ export default function Page() {
       </div>
       <div
         id="banner"
-        className="w-full pt-20 bg-gradient-to-r from-green-200 via-green-400 to-green-500 h-52 px-5 flex justify-center items-center md:px-20"
+        className="flex items-center justify-center w-full px-5 pt-20 bg-gradient-to-r from-green-200 via-green-400 to-green-500 h-52 md:px-20"
       >
         <h1 className="text-[42px] text-white text">ABOUT</h1>
       </div>
@@ -72,7 +72,7 @@ export default function Page() {
         id="about"
         className="max-w-[1520px] m-auto px-5 lg:px-20 pb-10 font-primary"
       >
-        <div className=" rounded-lg m-auto relative z-10 pt-20 bg-white">
+        <div className="relative z-10 pt-20 m-auto bg-white rounded-lg ">
           <VideoPlayer />
           <small>inauguration of the scube center and cultural stage</small>
         </div>
@@ -80,7 +80,7 @@ export default function Page() {
           <h2 className="text-center  text-2xl md:text-[38px] font-bold mb-4">
             What is S-Cube Center?
           </h2>
-          <p className="text-center text-base">
+          <p className="text-base text-center">
             S-CUBE Center means 3S, which are SNU, Samick, and Sustainability.
             S-Cube is an innovation center that focuses on developing
             sustainable social empowerment programs in technology, education,
@@ -99,7 +99,7 @@ export default function Page() {
             <CardAbout {...aboutItems[3]} />
           </div>
         </div>
-        <div className=" lg:hidden grid grid-cols-2  gap-3 ">
+        <div className="grid grid-cols-2 gap-3 lg:hidden">
           <CardAbout {...aboutItems[0]} />
           <CardAbout {...aboutItems[1]} />
 
@@ -107,20 +107,20 @@ export default function Page() {
           <CardAbout {...aboutItems[3]} />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-8">
+        <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2">
           <div className="w-full">
             <ExportedImage
               src={galery1}
               width={500}
               height={500}
-              className="w-full  h-full lg:h-80 object-cover"
+              className="object-cover w-full h-full lg:h-80"
             />
           </div>
-          <div className="h-full flex flex-col justify-center">
+          <div className="flex flex-col justify-center h-full">
             <h2 className="text-center md:text-left  text-2xl md:text-[38px] font-bold mb-4">
               History
             </h2>
-            <p className="text-justify md:text-left text-base">
+            <p className="text-base text-justify md:text-left">
               Mataram University (UNRAM), in collaboration with Seoul National
               University Social Responsibility (SNU SR) and Samick, is launching
               the SCUBE Center. Inaugurated in 2022, the SCUBE Center is set to
@@ -137,12 +137,12 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="my-10 md:my-20 bg-red-100">
+      <div className="my-10 bg-red-100 md:my-20">
         <div className="max-w-[1520px] m-auto py-10 px-5 lg:px-20">
           <h2 className="text-2xl md:text-[38px] font-bold mb-7 text-center  ">
             Our Vision and Goals
           </h2>
-          <div className="grid grid-cols-2  gap-5 mb-5 ">
+          <div className="grid grid-cols-2 gap-5 mb-5 ">
             <div className=" text-center place-self-end h-full max-w-[400px] bg-red-400 py-3 px-4 rounded-lg text-white font-semibold">
               <p>Realizing the effective social contribution</p>
             </div>
@@ -150,7 +150,7 @@ export default function Page() {
               <p>Creating sustainable social development</p>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-3">
             <div className="text-center place-self-end h-full max-w-[400px] bg-red-500 py-3 px-4 rounded-lg text-white font-semibold">
               <p>Increase the capacity and economic level of the community</p>
             </div>
@@ -166,19 +166,22 @@ export default function Page() {
 
       <div className="mt-0 md:mt-20 max-w-[1520px] m-auto py-10 px-5 lg:px-20">
         <h2 className="text-center  text-2xl md:text-[38px] font-bold mb-8">
-          Our Team
+          Our Teams
         </h2>
+        <div className="flex justify-center">
+          <ExportedImage src={bagan} width={500} height={500} />
+        </div>
         <div className="w-full lg:w-[50%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col items-center gap-3">
             <ExportedImage
               src={team1}
               width={500}
               height={500}
-              className="w-60 h-60 object-fill"
+              className="object-fill w-60 h-60"
             />
             <div>
-              <h3 className="font-bold text-lg">Prof Jun-Seok Hwang</h3>
-              <p className="text-center text-base">Advisory</p>
+              <h3 className="text-lg font-bold">Prof Jun-Seok Hwang</h3>
+              <p className="text-base text-center">Advisory</p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-3">
@@ -186,11 +189,11 @@ export default function Page() {
               src={team3}
               width={500}
               height={500}
-              className="w-60 h-60 object-fill"
+              className="object-fill w-60 h-60"
             />
             <div>
-              <h3 className="font-bold text-lg">Budi Irmawati</h3>
-              <p className="text-center text-base">General Manager</p>
+              <h3 className="text-lg font-bold">Budi Irmawati</h3>
+              <p className="text-base text-center">General Manager</p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-3">
@@ -198,11 +201,11 @@ export default function Page() {
               src={team4}
               width={500}
               height={500}
-              className="w-60 h-60 object-fill"
+              className="object-fill w-60 h-60"
             />
             <div>
-              <h3 className="font-bold text-lg">Ida Bagus Ketut Widiartha</h3>
-              <p className="text-center text-base">Deputy Manager</p>
+              <h3 className="text-lg font-bold">Ida Bagus Ketut Widiartha</h3>
+              <p className="text-base text-center">Deputy Manager</p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-3">
@@ -210,11 +213,11 @@ export default function Page() {
               src={team2}
               width={500}
               height={500}
-              className="w-60 h-60 object-fill"
+              className="object-fill w-60 h-60"
             />
             <div>
-              <h3 className="font-bold text-lg">I Wayan Agus Arimbawa</h3>
-              <p className="text-center text-base">Program and Cooperation</p>
+              <h3 className="text-lg font-bold">I Wayan Agus Arimbawa</h3>
+              <p className="text-base text-center">Program and Cooperation</p>
             </div>
           </div>
         </div>
@@ -227,7 +230,7 @@ export default function Page() {
           <h2 className="text-center text-3xl  md:text-[38px] font-bold mb-3 md:mb-7">
             Contact
           </h2>
-          <div className="flex flex-col lg:flex-row gap-5">
+          <div className="flex flex-col gap-5 lg:flex-row">
             <Link
               href="https://maps.app.goo.gl/pvaBZtr3xfrjYJF37"
               className="w-full lg:w-[700px] overflow-hidden"
@@ -238,25 +241,25 @@ export default function Page() {
                 alt="hero"
                 width={700}
                 height={500}
-                className="w-full hover:scale-105 transition-all duration-500 ease-in-out"
+                className="w-full transition-all duration-500 ease-in-out hover:scale-105"
               />
             </Link>
 
             <div className="flex flex-col gap-5">
               <div>
-                <h3 className="font-bold text-xl">Location</h3>
+                <h3 className="text-xl font-bold">Location</h3>
                 <p>
                   Building A Level 3 Faculty of Engineering, University of
                   Mataram
                 </p>
               </div>
-              <div className="flex md:flex-col gap-5 flex-row  justify-between">
+              <div className="flex flex-row justify-between gap-5 md:flex-col">
                 <div>
-                  <h3 className="font-bold text-xl">Number</h3>
+                  <h3 className="text-xl font-bold">Number</h3>
                   <p>+6281775262221</p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl">Email</h3>
+                  <h3 className="text-xl font-bold">Email</h3>
                   <p>scube@unram.ac.id</p>
                 </div>
               </div>
